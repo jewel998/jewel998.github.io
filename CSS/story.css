@@ -9,181 +9,181 @@
   background: rgba(0, 0, 0, 0.6);
   margin-bottom: 50px;
 }
-.story-text1{
+.story-text1.start{
     width: 34%;
     animation-name: fadeInOut;
     animation-delay: 15s;
     animation-duration: 5s;
 }
-.story-text2{
+.story-text2.start{
     width: 34%;
     animation-name: fadeInOut;
     animation-delay: 21s;
     animation-duration: 5s;
 }
-.story-text3{
+.story-text3.start{
     width: 38%;
     animation-name: fadeInOut;
     animation-delay: 27s;
     animation-duration: 5s;
 }
-.story-text4{
+.story-text4.start{
     width: 42%;
     animation-name: fadeInOut;
     animation-delay: 33s;
     animation-duration: 5s;
 }
-.story-text5{
+.story-text5.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 39s;
     animation-duration: 5s;
 }
-.story-text6{
+.story-text6.start{
     width: 40%;
     animation-name: fadeInOut;
     animation-delay: 45s;
     animation-duration: 5s;
 }
-.story-text7{
+.story-text7.start{
     width: 38%;
     animation-name: fadeInOut;
     animation-delay: 51s;
     animation-duration: 5s;
 }
-.story-text8{
+.story-text8.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 57s;
     animation-duration: 5s;
 }
-.story-text9{
+.story-text9.start{
     width: 40%;
     animation-name: fadeInOut;
     animation-delay: 63s;
     animation-duration: 5s;
 }
-.story-text10{
+.story-text10.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 69s;
     animation-duration: 5s;
 }
-.story-text11{
+.story-text11.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 75s;
     animation-duration: 5s;
 }
-.story-text12{
+.story-text12.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 81s;
     animation-duration: 5s;
 }
-.story-text13{
+.story-text13.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 87s;
     animation-duration: 5s;
 }
-.story-text14{
+.story-text14.start{
     width: 28%;
     animation-name: fadeInOut;
     animation-delay: 93s;
     animation-duration: 5s;
 }
-.story-text15{
+.story-text15.start{
     width: 42%;
     animation-name: fadeInOut;
     animation-delay: 99s;
     animation-duration: 5s;
 }
-.story-text16{
+.story-text16.start{
     width: 28%;
     animation-name: fadeInOut;
     animation-delay: 105s;
     animation-duration: 5s;
 }
-.story-text17{
+.story-text17.start{
     width: 30%;
     animation-name: fadeInOut;
     animation-delay: 111s;
     animation-duration: 5s;
 }
-.story-text18{
+.story-text18.start{
     width: 34%;
     animation-name: fadeInOut;
     animation-delay: 117s;
     animation-duration: 5s;
 }
-.story-text19{
+.story-text19.start{
     width: 44%;
     animation-name: fadeInOut;
     animation-delay: 123s;
     animation-duration: 5s;
 }
-.story-text20{
+.story-text20.start{
     width: 34%;
     animation-name: fadeInOut;
     animation-delay: 129s;
     animation-duration: 5s;
 }
-.story-text21{
+.story-text21.start{
     width: 36%;
     animation-name: fadeInOut;
     animation-delay: 135s;
     animation-duration: 5s;
 }
-.story-text22{
+.story-text22.start{
     width: 36%;
     animation-name: fadeInOut;
     animation-delay: 141s;
     animation-duration: 5s;
 }
-.story-text23{
+.story-text23.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 147s;
     animation-duration: 5s;
 }
-.story-text24{
+.story-text24.start{
     width: 40%;
     animation-name: fadeInOut;
     animation-delay: 153s;
     animation-duration: 5s;
 }
-.story-text25{
+.story-text25.start{
     width: 28%;
     animation-name: fadeInOut;
     animation-delay: 159s;
     animation-duration: 5s;
 }
-.story-text26{
+.story-text26.start{
     width: 48%;
     animation-name: fadeInOut;
     animation-delay: 165s;
     animation-duration: 5s;
 }
-.story-text27{
+.story-text27.start{
     width: 44%;
     animation-name: fadeInOut;
     animation-delay: 171s;
     animation-duration: 5s;
 }
-.story-text28{
+.story-text28.start{
     width: 34%;
     animation-name: fadeInOut;
     animation-delay: 177s;
     animation-duration: 5s;
 }
-.story-text29{
+.story-text29.start{
     width: 52%;
     animation-name: fadeInOut;
     animation-delay: 183s;
     animation-duration: 5s;
 }
-.story-text30{
+.story-text30.start{
     width: 40%;
     animation-name: fadeInOut;
     animation-delay: 189s;
