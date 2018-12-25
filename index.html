@@ -688,6 +688,7 @@ function carousel() {
             loader.className += " hide";
             var p = document.getElementById("Leave Like That");
             p.play();
+            $('[class^=story-text]').addClass("start");
             setTimeout(function(){intro1();},5000);
         });
         $("#spinner-form2").click( function(){
@@ -710,7 +711,6 @@ function carousel() {
             $('.player').css('bottom','40%');
             $('.player').css('left','15%');
             $('[class^=story-text]').css('height','7.2%');
-            $('[class^=story-text]').addClass("start");
         }
         else {
             $('#typer2').hide();
