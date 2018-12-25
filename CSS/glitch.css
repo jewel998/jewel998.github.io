@@ -1,0 +1,463 @@
+#container {
+    width: 2vw;
+    margin: 2vw auto;
+}
+a.glitch:hover {
+text-align: center;
+color: #fff;
+font-size: 2.5em;
+letter-spacing: 8px;
+font-weight: 400;
+/*Create overlap*/
+
+margin: 0;
+line-height: 0;
+/*Animation*/
+
+animation: glitch1 2.5s infinite;
+}
+p.glitch {
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: 400;
+  /*Create overlap*/
+  margin: 0;  
+  line-height: 0;
+  /*Animation*/
+  
+  animation: glitch1 2.5s infinite;
+}
+
+p.glitch:nth-child(2) {
+  color: #67f3da;
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: 400;
+  animation: glitch2 2.5s infinite;
+}
+
+p.glitch:nth-child(3) {
+  color: #f16f6f;
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: 400;
+  animation: glitch3 2.5s infinite;
+}
+h3.glitched1, i.glitched1, p.glitched1{
+  text-align: center;
+  color: #bbb;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-weight: 400;
+  /*Create overlap*/
+  /*Animation*/
+  
+  animation: glitch1 2.5s infinite;
+}
+h3.glitched2, i.glitched2, p.glitched2{
+  text-align: center;
+  color: #bbb;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-weight: 400;
+  /*Create overlap*/
+  /*Animation*/
+  
+  animation: glitched2 2.5s infinite;
+}
+h3.glitched3, i.glitched3, p.glitched3{
+  text-align: center;
+  color: #bbb;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-weight: 400;
+  /*Create overlap*/
+  /*Animation*/
+  
+  animation: glitched3 2.5s infinite;
+}
+h3.glitch{
+  text-align: center;
+  color: #fff;
+  letter-spacing: 8px;
+  font-weight: 400;
+  /*Create overlap*/
+  margin: 0;  
+  line-height: 0;
+  /*Animation*/
+  
+  animation: glitch1 2.5s infinite;
+}
+h3.glitch:nth-child(2) {
+  color: #67f3da;
+  text-align: center;
+  animation: glitch2 2.5s infinite;
+}
+
+h3.glitch:nth-child(3) {
+  color: #f16f6f;
+  text-align: center;
+  animation: glitch3 2.5s infinite;
+}
+.about{
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+/*Keyframes*/
+@keyframes glitchbackground {
+  0% {
+    transform: none;
+    opacity: 0.75;
+  }
+  5% {
+    transform: none;
+    opacity: 0.25;
+  }
+  10% {
+    transform: none;
+    opacity: 0.75;
+  }
+  15% {
+    transform: none;
+    opacity: 0.5;
+  }
+  20% {
+    transform: none;
+    opacity: 0.75;
+  }
+  25% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: none;
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  40% {
+    transform: none;
+    opacity: 0.5;
+  }
+  45% {
+    transform: none;
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 0.75;
+  }
+  55% {
+    transform: none;
+    opacity: 0.75;
+  }
+  60% {
+    transform: none;
+    opacity: 1;
+  }
+  65% {
+    transform: none;
+    opacity: 0.75;
+  }
+  70% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: none;
+    opacity: 1;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  85% {
+    transform: none;
+    opacity: 1;
+  }
+  90% {
+    transform: none;
+    opacity: 0.75;
+  }
+  95% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes glitched2 {
+  0% {
+    transform: skew(-0.9deg, -0.1deg);
+    opacity: 1;
+  }
+  7% {
+    transform: none;
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: none;
+    opacity: 1;
+  }
+  35% {
+    transform: skew(-0.7deg, -0.6deg);
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 0.75;
+  }
+  55% {
+    transform: translate(0px, 2px);
+    opacity: 1;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 0.75;
+  }
+  75% {
+    transform: none;
+    opacity: 1;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: skew(-0.5deg, -0.4deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes glitched3 {
+  0% {
+    transform: none;
+    opacity: 0.75;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.8deg);
+    opacity: 1;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(-0.7deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: translate(0px, -2px);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 0.75;
+  }
+  75% {
+    transform: skew(-0.6deg, -0.3deg);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 0.75;
+  }
+}
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}

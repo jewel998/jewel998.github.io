@@ -1,0 +1,206 @@
+[class^=story-text] {
+  font-size: 3vw;
+  font-family: 'Dawning of a New Day', cursive;
+  opacity: 0;
+  margin-top: 10px;
+  z-index:200;
+  color: #fff;
+  height: 3.8%;
+  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
+}
+.story-text1{
+    width: 34%;
+    animation-name: fadeInOut;
+    animation-delay: 15s;
+    animation-duration: 5s;
+}
+.story-text2{
+    width: 34%;
+    animation-name: fadeInOut;
+    animation-delay: 21s;
+    animation-duration: 5s;
+}
+.story-text3{
+    width: 38%;
+    animation-name: fadeInOut;
+    animation-delay: 27s;
+    animation-duration: 5s;
+}
+.story-text4{
+    width: 42%;
+    animation-name: fadeInOut;
+    animation-delay: 33s;
+    animation-duration: 5s;
+}
+.story-text5{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 39s;
+    animation-duration: 5s;
+}
+.story-text6{
+    width: 40%;
+    animation-name: fadeInOut;
+    animation-delay: 45s;
+    animation-duration: 5s;
+}
+.story-text7{
+    width: 38%;
+    animation-name: fadeInOut;
+    animation-delay: 51s;
+    animation-duration: 5s;
+}
+.story-text8{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 57s;
+    animation-duration: 5s;
+}
+.story-text9{
+    width: 40%;
+    animation-name: fadeInOut;
+    animation-delay: 63s;
+    animation-duration: 5s;
+}
+.story-text10{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 69s;
+    animation-duration: 5s;
+}
+.story-text11{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 75s;
+    animation-duration: 5s;
+}
+.story-text12{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 81s;
+    animation-duration: 5s;
+}
+.story-text13{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 87s;
+    animation-duration: 5s;
+}
+.story-text14{
+    width: 28%;
+    animation-name: fadeInOut;
+    animation-delay: 93s;
+    animation-duration: 5s;
+}
+.story-text15{
+    width: 42%;
+    animation-name: fadeInOut;
+    animation-delay: 99s;
+    animation-duration: 5s;
+}
+.story-text16{
+    width: 28%;
+    animation-name: fadeInOut;
+    animation-delay: 105s;
+    animation-duration: 5s;
+}
+.story-text17{
+    width: 30%;
+    animation-name: fadeInOut;
+    animation-delay: 111s;
+    animation-duration: 5s;
+}
+.story-text18{
+    width: 34%;
+    animation-name: fadeInOut;
+    animation-delay: 117s;
+    animation-duration: 5s;
+}
+.story-text19{
+    width: 44%;
+    animation-name: fadeInOut;
+    animation-delay: 123s;
+    animation-duration: 5s;
+}
+.story-text20{
+    width: 34%;
+    animation-name: fadeInOut;
+    animation-delay: 129s;
+    animation-duration: 5s;
+}
+.story-text21{
+    width: 36%;
+    animation-name: fadeInOut;
+    animation-delay: 135s;
+    animation-duration: 5s;
+}
+.story-text22{
+    width: 36%;
+    animation-name: fadeInOut;
+    animation-delay: 141s;
+    animation-duration: 5s;
+}
+.story-text23{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 147s;
+    animation-duration: 5s;
+}
+.story-text24{
+    width: 40%;
+    animation-name: fadeInOut;
+    animation-delay: 153s;
+    animation-duration: 5s;
+}
+.story-text25{
+    width: 28%;
+    animation-name: fadeInOut;
+    animation-delay: 159s;
+    animation-duration: 5s;
+}
+.story-text26{
+    width: 48%;
+    animation-name: fadeInOut;
+    animation-delay: 165s;
+    animation-duration: 5s;
+}
+.story-text27{
+    width: 44%;
+    animation-name: fadeInOut;
+    animation-delay: 171s;
+    animation-duration: 5s;
+}
+.story-text28{
+    width: 34%;
+    animation-name: fadeInOut;
+    animation-delay: 177s;
+    animation-duration: 5s;
+}
+.story-text29{
+    width: 52%;
+    animation-name: fadeInOut;
+    animation-delay: 183s;
+    animation-duration: 5s;
+}
+.story-text30{
+    width: 40%;
+    animation-name: fadeInOut;
+    animation-delay: 189s;
+    animation-duration: 5s;
+}
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+  
+    45% {
+      opacity: 0.75;
+    }
+  
+    100% {
+      opacity: 0%;
+      visibility: hidden;
+    }
+  }
+  

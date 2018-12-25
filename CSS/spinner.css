@@ -1,0 +1,105 @@
+.spinner-master2 * {
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+.spinner-master2 {
+    position: relative;
+    margin: 10px auto;
+    height: 50px;
+    width: 50px;
+}
+.spinner-master2 input[type=checkbox] {
+    display: none;
+}
+.spinner-master2 label {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 10px;
+    left: 0;
+}
+.spinner-master2 .spinner2 {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+   background-color: #eee;
+   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+.spinner-master2 .diagonal.part-1 {
+    position: relative;
+    float: left;
+}
+.spinner-master2 .horizontal {
+    position: relative;
+    float: left;
+    margin-top: 7px;
+}
+.spinner-master2 .diagonal.part-2 {
+    position: relative;
+    float: left;
+    margin-top: 6px;
+}
+.spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .horizontal {
+    opacity: 0;
+}
+.spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .diagonal.part-1 {
+    transform: rotate(135deg);
+    margin-top: 10px;
+}
+.spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .diagonal.part-2 {
+    transform: rotate(-135deg);
+    margin-top: -16px;
+}
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.85);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
