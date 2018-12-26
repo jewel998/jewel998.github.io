@@ -140,7 +140,7 @@ body, html {
                 <div id="container"><a id="turnoff3" class="glitch" href="#projects">PROJECTS</a></div>
                 <div id="container"><a id="turnoff4" class="glitch" href="#contact">CONTACT</a></div>
         </div>
-                <div class="player">
+                <div class="player" style="display:none">
                         <ul>
                            <li class="cover"><img src="https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2Fdba0557d6a03907c1065843c098cdf94.1000x1000x1.jpg"/></li>
                            <li class="info">
@@ -698,8 +698,7 @@ function carousel() {
             });
         });
         var width = $(window).width(); 
-        var height = $(window).height(); 
-
+        var height = $(window).height();
         if ((width >= 1024  ) && (height>=600)) {
             $('.moving-zone').css("left","30%")
             $('#typer1').addClass("glitch");
@@ -711,6 +710,8 @@ function carousel() {
             $('.player').css('bottom','40%');
             $('.player').css('left','15%');
             $('[class^=story-text]').css('height','7.2%');
+            $('[class^=story-text]').css('font-size','3.6vw');
+            $('.player').show();
         }
         else {
             $('#typer2').hide();
@@ -733,6 +734,9 @@ function carousel() {
         $('#turnoff4').click( function(){
             $('#text').hide();
         });
+        if(height>=770){
+            $('.player').show();
+        }
 
 </script>
 </body>
