@@ -1,28 +1,28 @@
 [class^=story-text] {
-  font-size: 3vw;
+  font-size: 5vw;
   font-family: 'Dawning of a New Day', cursive;
   opacity: 0;
   margin-top: 10px;
   z-index:200;
   color: #fff;
-  height: 3.8%;
+  height: 7.4%;
   background: rgba(0, 0, 0, 0.6);
   margin-bottom: 50px;
 }
 .story-text1.start{
-    width: 34%;
+    width: 37%;
     animation-name: fadeInOut;
     animation-delay: 15s;
     animation-duration: 5s;
 }
 .story-text2.start{
-    width: 34%;
+    width: 37%;
     animation-name: fadeInOut;
     animation-delay: 21s;
     animation-duration: 5s;
 }
 .story-text3.start{
-    width: 38%;
+    width: 40%;
     animation-name: fadeInOut;
     animation-delay: 27s;
     animation-duration: 5s;
