@@ -1,0 +1,33 @@
+.__terminal {
+    padding: 10px 6px 50% 6px;
+    color: #149414;
+    div{
+        display: block;
+        width: 100%;
+        font-family: "Courier Prime", Courier, monospace;
+        white-space: break-spaces;
+        .bold{
+            font-weight: bolder;
+        }
+        .dark{
+            color: #0e6b0e;
+        }
+        .light{
+            color: #9ccc9c;
+        }
+        .banner{
+            color: white;
+            display: block;
+            font-size: 0.3rem;
+            line-height: 0.4rem;
+            span{
+                font-size: 0.3rem;
+                line-height: 0.4rem;
+            }
+        }
+        span{
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+    }
+}
