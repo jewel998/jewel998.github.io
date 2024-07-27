@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3fb4ea;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+input {
+  font-family: "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  padding: 0;
+  margin: 0;
+  background: white;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+svg.icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}

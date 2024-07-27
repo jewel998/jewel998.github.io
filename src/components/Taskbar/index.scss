@@ -1,0 +1,65 @@
+#Taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6rem;
+    color: white;
+    font-size: 1.4rem;
+    .icon {
+      width: 4.8rem;
+      height: 4.8rem;
+      fill: white;
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  #StartButton:hover .icon {
+    fill: var(--primary);
+  }
+
+  .right {
+    .button {
+      padding: 0.8rem 0.6rem;
+      &.px-0 {
+        padding: 1.2rem 0;
+      }
+      .icon {
+        height: 3.6rem;
+        width: 3.6rem;
+      }
+    }
+    .notification {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0.8rem 0;
+      .icon {
+        height: 4.2rem;
+        width: 4.2rem;
+      }
+    }
+  }
+
+  #ShowDesktop {
+    height: 6rem;
+    padding: 0 0.8rem 0 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    margin-left: 0.8rem;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use "sass:math";
+
+@mixin loader($size: "medium", $loader-size: 50px, $pip-size: 8px) {
+  .__loader.default.#{$size} {
+    position: relative;
+    width: $loader-size;
+    height: $loader-size;
+    border-radius: 50%;
+  }
+  .__loader.default.#{$size} span {
+    position: absolute;
+    width: $pip-size;
+    height: $pip-size;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+    opacity: 0;
+    display: block;
+    left: 50%;
+    bottom: 0;
+    transform-origin: 0 math.div(-$loader-size + $pip-size * 2, 2);
+  }
+}
+
+@mixin loaderAnim($duration: 4000ms, $gap: 25, $slowGap: 30) {
+  @for $i from 0 through 4 {
+    $start: 100 + $i * $gap;
+    $mid: 370 + $start;
+    $finish: 315 + $start;
+    $delay: 400 - ($i * 100);
+
+    .__loader.default .ellipse-#{$i} {
+      transform: rotate(0deg);
+      animation: default-loader-rotate-#{$i}
+          #{$duration}
+          ease-out
+          #{$delay}ms
+          infinite,
+        default-loader-opacity #{$duration} linear #{$delay}ms infinite;
+    }
+
+    @keyframes default-loader-rotate-#{$i} {
+      0%,
+      5% {
+        transform: rotate(0deg);
+      }
+      20% {
+        transform: rotate(#{$start - $slowGap}deg);
+      }
+      35% {
+        transform: rotate(#{$start}deg);
+      }
+      55% {
+        transform: rotate(#{$mid - $slowGap}deg);
+      }
+      70% {
+        transform: rotate(#{$mid}deg);
+      }
+      90%,
+      100% {
+        transform: rotate(735deg);
+      }
+    }
+  }
+
+  @keyframes default-loader-opacity {
+    0%,
+    5%,
+    90%,
+    100% {
+      opacity: 0;
+    }
+    15%,
+    80% {
+      opacity: 1;
+    }
+  }
+}
+
+@include loader("medium", 7.2rem, 0.8rem);
+@include loader("small", 3.6rem, 0.4rem);
+@include loaderAnim(4000ms, 25, 27);

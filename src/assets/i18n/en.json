@@ -1,0 +1,17 @@
+{
+  "lock-screen.dislike.about": "We'll switch to a new picture.",
+  "lock-screen.dislike.title": "Not a fan!",
+  "lock-screen.like.about": "We'll keep showing you images like this.",
+  "lock-screen.like.title": "I like it!",
+  "lock-screen.password.hint.message": "Take a guess, be my guest!",
+  "lock-screen.password.hint.title": "Password hint",
+  "lock-screen.question1.about": "In 1947, a moth was found causing issues in the Mark II computer, coining the term 'bug.'",
+  "lock-screen.question1.link": "Meet the famous moth!",
+  "lock-screen.question1.question": "Did you know the first computer bug was an actual bug?",
+  "lock-screen.question2.about": "Because light attracts bugs! Also, it’s easier on the eyes during late-night coding sessions.",
+  "lock-screen.question2.link": "Discover the truth about dark mode!",
+  "lock-screen.question2.question": "Why do programmers prefer dark mode?",
+  "lock-screen.question3.question": "Like what you see?",
+  "now-playing": "Now playing",
+  "welcome": "Welcome"
+}

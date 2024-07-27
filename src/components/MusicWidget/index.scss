@@ -1,0 +1,59 @@
+#MusicWidget {
+  position: absolute;
+  bottom: 10.8rem;
+  right: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  pointer-events: none;
+
+  .visualiser {
+    width: 100%;
+    height: 3.6rem;
+
+    canvas {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .controls-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+    color: white;
+    max-width: 38rem;
+  }
+
+  .now-playing {
+    flex: 1;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: right;
+    line-height: 110%;
+    opacity: 0.8;
+  }
+
+  .separator {
+    border: 1px solid white;
+    opacity: 0.4;
+    height: 6.4rem;
+  }
+
+  .music-details {
+    flex: 3.5;
+    h3 {
+      font-size: 2.8rem;
+      line-height: 130%;
+      font-weight: 400;
+    }
+    p {
+      line-height: 130%;
+      font-size: 2rem;
+      font-weight: 300;
+      opacity: 0.8;
+    }
+  }
+}

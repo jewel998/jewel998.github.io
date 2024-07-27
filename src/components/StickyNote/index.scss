@@ -1,0 +1,41 @@
+@use "sass:math";
+
+.__sticky_note {
+  position: fixed;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 18px 28px 25px -18px rgba(0, 0, 0, 0.2);
+
+  $note-height: 50rem;
+  $note-width: 48rem;
+
+  &.focus {
+    top: calc(50vh - math.div($note-height, 2)) !important;
+    left: calc(50vw - math.div($note-width, 2)) !important;
+    transform: rotate(0deg) !important;
+
+    .note {
+      max-height: $note-height;
+      max-width: $note-width;
+      pointer-events: all;
+    }
+  }
+
+  > * {
+    pointer-events: none;
+  }
+
+  > .note {
+    height: 84vh;
+    weight: 64vw;
+    max-height: 20rem;
+    max-width: 19rem;
+    background-color: lightyellow;
+    border: 1px solid;
+    border-top-right-radius: #{random(44) + 40}px #{random(4) + 2}px;
+    border-top-left-radius: #{random(2) + 4}px #{random(44) + 40}px;
+    border-bottom-right-radius: #{random(2) + 4}px #{random(24) + 60}px;
+    border-bottom-left-radius: #{random(44) + 40}px #{random(4) + 4}px;
+    box-shadow: 18px 28px 25px -18px rgba(0, 0, 0, 0.2);
+    transition: all 0.15s ease-in-out;
+  }
+}
