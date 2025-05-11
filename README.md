@@ -1,54 +1,110 @@
-# React + TypeScript + Vite
+# Modern Hacker Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, accessible, and interactive portfolio website with a hacker aesthetic.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌓 Light and dark mode support
+- 🎵 Interactive music player
+- ⌨️ Terminal-style interface
+- ♿ Comprehensive accessibility features
+- ⌨️ Keyboard shortcuts for navigation
+- 📱 Fully responsive design
+- 🚀 Optimized performance
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Reactjs**: React framework
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **Shadcn/UI**: Reusable UI components
+- **Lucide Icons**: Beautiful, consistent icons
+- **Three.js**: 3D graphics library (for matrix background)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js 18.x or higher
+- npm or yarn
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Installation
+
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/yourusername/hacker-portfolio.git
+   cd hacker-portfolio
+   \`\`\`
+
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+
+   # or
+
+   yarn install
+   \`\`\`
+
+3. Run the development server:
+   \`\`\`bash
+   npm run dev
+
+   # or
+
+   yarn dev
+   \`\`\`
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Accessibility Features
+
+This portfolio is designed to be accessible to all users, including those with disabilities. Key accessibility features include:
+
+- **Keyboard Navigation**: All interactive elements are accessible via keyboard
+- **Skip Links**: Allow keyboard users to bypass navigation and jump to main content
+- **ARIA Attributes**: Proper ARIA roles, states, and properties for screen readers
+- **Focus Management**: Visible focus indicators for keyboard navigation
+- **Color Contrast**: All text meets WCAG AA standards for readability
+- **Screen Reader Announcements**: Dynamic content changes are announced to screen readers
+- **Responsive Design**: Works on all devices and screen sizes
+
+## Keyboard Shortcuts
+
+Press `?` anywhere on the site to view all available keyboard shortcuts. Here are some key shortcuts:
+
+| Shortcut         | Action                            |
+| ---------------- | --------------------------------- |
+| `g` + `h`        | Go to home                        |
+| `g` + `a`        | Go to about section               |
+| `g` + `p`        | Go to projects section            |
+| `g` + `s`        | Go to skills section              |
+| `g` + `c`        | Go to contact section             |
+| `t`              | Toggle theme (light/dark)         |
+| `m`              | Toggle music player visibility    |
+| `space`          | Play/pause music                  |
+| `j`              | Previous track                    |
+| `k`              | Next track                        |
+| `shift` + `+`    | Increase volume                   |
+| `shift` + `-`    | Decrease volume                   |
+| `ctrl` + `` ` `` | Open terminal                     |
+| `esc`            | Close terminal                    |
+| `?`              | Show/hide keyboard shortcuts help |
+| `alt` + `s`      | Skip to main content              |
+
+## Customization
+
+### Changing Personal Information
+
+Edit the JSON files in the `data` directory:
+
+- `personal.json`: Basic information like name, title, bio
+- `experience.json`: Work experience details
+- `education.json`: Education history
+- `skills.json`: Skills and interests
+- `projects.json`: Project showcase information
+- `playlist.json`: Music playlist configuration
+
+## Acknowledgments
+
+- [Shadcn/UI](https://ui.shadcn.com/) for the beautiful UI components
+- [Lucide Icons](https://lucide.dev/) for the icon set
