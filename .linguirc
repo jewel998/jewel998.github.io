@@ -1,0 +1,10 @@
+{
+  "compileNamespace": "cjs",
+  "format": "lingui",
+  "fallbackLocales": true,
+  "sourceLocale": "en",
+  "locales": [
+    "en",
+    "de"
+  ]
+}

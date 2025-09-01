@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fff;
+  --foreground: #000;
+  --border: #e5e7eb;
+  --primary: var(--color-emerald-500);
+  @supports (color: color-mix(in lab, red, red)) {
+    --pattern-fg: color-mix(in oklab, #000 5%, transparent);
+  }
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --border: #334155;
+  --primary: var(--color-emerald-500);
+  @supports (color: color-mix(in lab, red, red)) {
+    --pattern-fg: color-mix(in oklab, #fff 5%, transparent);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.font-sign {
+  font-family: "Caveat", cursive;
+}
