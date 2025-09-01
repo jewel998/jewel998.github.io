@@ -1,0 +1,1 @@
+import{j as o}from"./index-BJaHJnnm.js";import{H as t,f as e,g as n,h as s}from"./footer-CFtA10_y.js";function r(){return o.jsxs(t,{children:[o.jsx(e,{}),o.jsx(n,{})]})}function u(){return o.jsx(s,{children:o.jsx(r,{})})}export{u as component};
