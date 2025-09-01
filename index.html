@@ -1,743 +1,93 @@
 <!DOCTYPE html>
-<html>
-<title>Jewel Barman</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Exo 2|Press Start 2P|Dawning+of+a+New+Day|Love+Ya+Like+A+Sister' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="CSS/tailwind.min.css">
-<link rel="stylesheet" href="CSS/w3.css">
-<link rel="stylesheet" href="CSS/intro.css">
-<link rel="stylesheet" href="CSS/story.css">
-<link rel="stylesheet" href="CSS/1.css">
-<link rel="stylesheet" href="CSS/player.css">
-<link rel="stylesheet" href="CSS/glitch.css">
-<link rel="stylesheet" href="CSS/3D.css">   
-<link rel="stylesheet" href="CSS/spinner.css">
-<script src="JS/typewriter.js"></script>
-<script src="JS/jquery-3.2.1.slim.min.js"></script>
-<script src="JS/jquery.plate.js"></script>
-<script src="JS/anime.min.js"></script>
-<script src="JS/jquery.min.js"></script>
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {
-    height: 100%;
-    background: black;
-    scroll-behavior: smooth;
-    overflow-y: hidden;
-}
-#home{
-    height: 100%;
-    background: url('images/home.jpg');
-    animation: glitchbackground 4s infinite;
-    background-attachment: fixed;
-    background-position: center;
-    scroll-behavior: smooth;
-}
-#about{
-    height: 100%;
-    background: url('images/about1.jpg');
-    animation: glitchbackground 4s infinite;
-    background-attachment: fixed;
-    background-position: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    opacity: 0.85;
-    color: white;
-    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
-                 10px 20px 5px rgba(0,0,0,0.05),
-                 -10px 20px 5px rgba(0,0,0,0.05);
-}
-#services{
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-#projects{
-    background: black;
-    height: 100%;
-    font-family: 'Exo 2';
-    overflow-y: hidden;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-#contact{
-    height: 100%;
-    background:radial-gradient(circle,#333 4%, black 80%); 
-    overflow-y: hidden;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-.lds-ripple {
-  display: inline-flex;
-  z-index: 99;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  background: black;
-  justify-content: center;
-  align-items: center;
-  animation: zoomin 100s ease-in infinite;
-}
-.lds-ripple.hide{
-    animation: fadeOut1 4s;
-    animation-fill-mode: forwards;
-}
-@keyframes fadeOut1 {
-    100% {
-        z-index:1000;
-        transform: scale(500);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-@-webkit-keyframes zoomin {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.5);}
-}
-@keyframes zoomin {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.5);}
-  100% {transform: scale(2);}
-} /*End of Zoom in Keyframes */
-.loader1{
-    background: black;
-    color:white;
-    line-height:0;
-    margin:30px;
-    height: 100%;
-    text-align:center;
-    padding: 0.2em 0.2em;
-}
-.midloader{
-    background: white;
-    color:black;
-    text-align:center;
-    padding: 0.2em 0.2em;
-}
-</style>
-<body>
-    <div class="lds-ripple w3-wide w3-container w3-text-white">
-        <b><div style="border: 2px solid #fff">
-        <p class="w3-wide loader1" style="font-size: 5em">PARENTAL</p>
-        <div class="midloader"><p class="w3-wide" style="font-size:3.5em">A D V I S O R Y</p></div>
-        <p class="w3-wide loader1" style="font-size: 2.5em">EXPLICIT CONTENT</p>
-        </div></b>
-    </div>
-
-    <div id="overlay-content" class="w3-display-top overlay" style="overflow-y: scroll">
-        <div class="w3-display-middle w3-xlarge w3-wide">
-                <div id="container"><a id="turnon" class="glitch" href="#home">HOME</a></div>
-                <div id="container"><a id="turnoff1" class="glitch" href="#about">ABOUT</a></div>
-                <div id="container"><a id="turnoff2" class="glitch" href="#services">SERVICES</a></div>
-                <div id="container"><a id="turnoff3" class="glitch" href="#projects">PROJECTS</a></div>
-                <div id="container"><a id="turnoff4" class="glitch" href="#contact">CONTACT</a></div>
-        </div>
-                <div class="player" style="display:none">
-                        <ul>
-                           <li class="cover"><img src="https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2Fdba0557d6a03907c1065843c098cdf94.1000x1000x1.jpg"/></li>
-                           <li class="info">
-                              <h1 id="song">Leave Like That</h1>
-                              <h2 id="artist">SYML</h2>
-                     
-                              <div class="button-items">
-                                  <!--Background Audio-->
-                                <audio id="Leave Like That" artist="SYML" imagesrc="https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2Fdba0557d6a03907c1065843c098cdf94.1000x1000x1.jpg" preload="auto" src="SYML-Leave Like That.mp3" autoplay>
-                                    <p>If you are reading this, it is because your browser does not support the audio element.</p>
-                                </audio>
-                                <audio id="Crosses" artist="José González" imagesrc="https://images.eil.com/large_image/JOSE_GONZALEZ_CROSSES-493115.jpg" src="José González - Crosses (Official Music Video).mp3" preload="auto">
-                                    <p>If you are reading this, it is because your browser does not support the audio element.</p>
-                                </audio>
-                                <audio id="Obstacles" artist="Syd Matters" imagesrc="https://is4-ssl.mzstatic.com/image/thumb/Features/b9/ae/df/dj.dvemryoq.jpg/268x0w.jpg" src="Obstacles by Syd Matters (Life Is Strange) Lyrics.mp3" preload="auto">
-                                    <p>If you are reading this, it is because your browser does not support the audio element.</p>
-                                </audio>
-                                 <div id="slider"><div id="elapsed"></div></div>
-                                 <p id="timer">0:00</p>
-                                 <div class="controls">
-                                    <span  id="prev" class="expend"><svg class="step-backward" viewBox="0 0 25 25" xml:space="preserve">
-                                       <g><polygon points="4.9,4.3 9,4.3 9,11.6 21.4,4.3 21.4,20.7 9,13.4 9,20.7 4.9,20.7"/></g>
-                                    </svg></span>
-                     
-                                    <svg id="play" viewBox="0 0 25 25" xml:space="preserve">
-                                        <defs><rect x="-49.5" y="-132.9" width="446.4" height="366.4"/></defs>
-                                       <g><circle fill="none" cx="12.5" cy="12.5" r="10.8"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.7,6.9V18c0,0,0.2,1.4,1.8,0l8.1-4.8c0,0,1.2-1.1-1-2L9.8,6.5 C9.8,6.5,9.1,6,8.7,6.9z"/>
-                                       </g>
-                                    </svg>
-                                   
-                     
-                                    <svg id="pause" viewBox="0 0 25 25" xml:space="preserve">
-                                       <g>
-                                          <rect x="6" y="4.6" width="3.8" height="15.7"/>
-                                          <rect x="14" y="4.6" width="3.9" height="15.7"/>
-                                       </g>
-                                    </svg>
-                     
-                                    <span id="next" class="expend"><svg class="step-foreward" viewBox="0 0 25 25" xml:space="preserve">
-                                       <g><polygon points="20.7,4.3 16.6,4.3 16.6,11.6 4.3,4.3 4.3,20.7 16.7,13.4 16.6,20.7 20.7,20.7"/></g>
-                                     </svg></span>
-                                 </div>
-                              </div>
-                           </li>
-                        </ul>
-                     </div>
-    </div>
-        
-    <!-- Nav Bar-->
-    <div class="w3-top w3-container">
-        <div style="background:rgba(10,10,10,0.8)">
-            <div class="w3-display-topleft w3-padding-large w3-xlarge w3-text-white">
-                <a href="#home"><img src="images/2.png" style="height:50px;width:50px"></a>
-            </div>
-            <div class="w3-display-topright w3-padding-large w3-xlarge w3-text-white">
-                    <div class="spinner-master2">
-                            <input type="checkbox" id="spinner-form2"/>
-                            <label for="spinner-form2" class="spinner-spin2">
-                              <div class="spinner2 diagonal part-1"></div>
-                              <div class="spinner2 horizontal"></div>
-                              <div class="spinner2 diagonal part-2"></div>
-                            </label>
-                          </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Story Lines-->
-    <div class="story-text1 w3-display-bottommiddle w3-center">Stories often have a genre</div>
-    <div class="story-text2 w3-display-bottommiddle w3-center">I can't decide on mine tho</div>
-    <div class="story-text3 w3-display-bottommiddle w3-center">I love developing new stuffs</div>
-    <div class="story-text4 w3-display-bottommiddle w3-center">I love meat, I love good music</div>
-    <div class="story-text5 w3-display-bottommiddle w3-center">Please don't judge me by this.</div>
-    <div class="story-text6 w3-display-bottommiddle w3-center">If you wonder "why the glitch?"</div>
-    <div class="story-text7 w3-display-bottommiddle w3-center">Isn't life more of a horror</div>
-    <div class="story-text8 w3-display-bottommiddle w3-center">When you wake up and work all day</div>
-    <div class="story-text9 w3-display-bottommiddle w3-center">And then you still have fears</div>
-    <div class="story-text10 w3-display-bottommiddle w3-center">That you could lose everything</div>
-    <div class="story-text11 w3-display-bottommiddle w3-center">with just the blink of an eye.</div>
-    <div class="story-text12 w3-display-bottommiddle w3-center">Well, there's a reason we pretend</div>
-    <div class="story-text13 w3-display-bottommiddle w3-center">Maybe the lies we tell each other</div>
-    <div class="story-text14 w3-display-bottommiddle w3-center">are less horrible</div>
-    <div class="story-text15 w3-display-bottommiddle w3-center">than the truths we keep hidden</div>
-    <div class="story-text16 w3-display-bottommiddle w3-center">Life is a mystery</div>
-    <div class="story-text17 w3-display-bottommiddle w3-center">Have you heard about</div>
-    <div class="story-text18 w3-display-bottommiddle w3-center">"The Butterfly Effect"?</div>
-    <div class="story-text19 w3-display-bottommiddle w3-center">Wouldn't it be strange if you</div>
-    <div class="story-text20 w3-display-bottommiddle w3-center">could go back and change</div>
-    <div class="story-text21 w3-display-bottommiddle w3-center">the future from the past?</div>
-    <div class="story-text22 w3-display-bottommiddle w3-center">The things that you could</div>
-    <div class="story-text23 w3-display-bottommiddle w3-center">do with all the things you know</div>
-    <div class="story-text24 w3-display-bottommiddle w3-center">But how long could it last?</div>
-    <div class="story-text25 w3-display-bottommiddle w3-center">But what will happen</div>
-    <div class="story-text26 w3-display-bottommiddle w3-center">when the nightmare does not end</div>
-    <div class="story-text27 w3-display-bottommiddle w3-center">and time comes crashing down?</div>
-    <div class="story-text28 w3-display-bottommiddle w3-center">It's left unspoken;</div>
-    <div class="story-text29 w3-display-bottommiddle w3-center">you can't fix what you have broken</div>
-    <div class="story-text30 w3-display-bottommiddle w3-center">But give up what you found?</div>
-
-
-        <div class="intro1" style="display:none;">
-            <div class="ml12 w3-display-middle">Welcome to my Page</div>
-        </div>
-        <div class="intro2" style="display:none;">
-            <div class="ml12 w3-display-middle">Nothing Special Here</div>
-        </div>
-<div id="home">
-      <!-- particles.js container -->
-        <div id="particles-js" style="width:100%;height: 100%;">
-        </div>
-    <div id="text" class="w3-text-white w3-display-middle">
-            <div class="w3-container">
-            <h1>
-                <p  id="typer1" href="" class="typewrite" data-period="2000" data-type='[ "Jewel Barman","Explore, Learn, Exploit", "I am Creative.", "I Love Design.", "I Love to Develop.","Coming Soon." ]'>
-                    <p  id="typer2" href="" class="typewrite glitch" data-period="2000" data-type='[ "Jewel Barman","Explore, Learn, Exploit", "I am Creative.", "I Love Design.", "I Love to Develop.","Coming Soon." ]'>
-                        <p  id="typer3" href="" class="typewrite glitch" data-period="2000" data-type='[ "Jewel Barman","Explore, Learn, Exploit", "I am Creative.", "I Love Design.", "I Love to Develop.","Coming Soon." ]'>
-                <span class="wrap"></span>
-                </p></p></p>
-            </h1>
-            </div>
-            <br>
-            <hr class="w3-border-grey" style="margin:auto;width:40%">
-            <br>
-            <div class="container">
-                <p id="date1" class="w3-large w3-center">Freelancer, Developer, Blogger.</p>
-                <p id="date2" class="w3-large w3-center glitch">Freelancer, Developer, Blogger.</p>
-                <p id="date3" class="w3-large w3-center glitch">Freelancer, Developer, Blogger.</p>
-            </div>
-    </div>
-</div>
-<!-- About Section -->
-<div class="w3-display-container" style="padding:128px 16px;" id="about">
-    <div class="container w3-display-topmiddle w3-center" style="position:absolute;top:16%">
-    <h3 class="w3-center glitch about">ABOUT ME</h3>
-    <h3 class="w3-center glitch about">ABOUT ME</h3>
-    <h3 class="w3-center glitch about">ABOUT ME</h3>
-    </div>
-    <br>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-center w3-large glitched1 about">Key features</p>
-    <div class="w3-row-padding w3-center" style="margin-top:64px">
-      <div class="w3-quarter" style="margin-bottom: 20px;">
-        <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center glitched1"></i><div><br><br></div>
-        <p class="w3-large glitch about">Responsive</p>
-        <p class="w3-large glitch about">Responsive</p>
-        <p class="w3-large glitch about">Responsive</p>
-        <div><br><br></div>
-        <p class="glitched3 about">Try opening it in your phone, tablets or other devices. It'll give you a better and a newer cool look.</p>
-      </div>
-      <div class="w3-quarter" style="margin-bottom: 20px;">
-        <i class="fa fa-heart w3-margin-bottom w3-jumbo glitched1"></i><div><br><br></div>
-        <p class="w3-large glitch about">Passion</p>
-        <p class="w3-large glitch about">Passion</p>
-        <p class="w3-large glitch about">Passion</p>
-        <div><br><br></div>
-        <p class="glitched3 about">I've always been interested in Web Development, Software Development. I've been freelancing for past 1 year.</p>
-      </div>
-      <div class="w3-quarter" style="margin-bottom: 20px;">
-        <i class="fa fa-diamond w3-margin-bottom w3-jumbo glitched1"></i><div><br><br></div>
-        <p class="w3-large glitch about">Design</p>
-        <p class="w3-large glitch about">Design</p>
-        <p class="w3-large glitch about">Design</p>
-        <div><br><br></div>
-        <p class="glitched3 about">Coming up with even cooler designs and fresher new looks everday.</p>
-      </div>
-      <div class="w3-quarter">
-        <i class="fa fa-cog w3-margin-bottom w3-jumbo glitched1"></i><div><br><br></div>
-        <p class="w3-large glitch about">Support</p>
-        <p class="w3-large glitch about">Support</p>
-        <p class="w3-large glitch about">Support</p>
-        <div><br><br></div>
-        <p class="glitched3 about">Google, Github, Freelancers, Open-Source, StackOverFlow. These are the best support any developer can ever get.</p>
-      </div>
-    </div>
-</div>
-  <!-- Services - "We know design" -->
-  <div id="services" class="w3-display-container w3-text-white" style="background-attachment:fixed">
-    <!-- Automatic Slideshow Images -->
-      <div class="mySlides bgimg1 w3-display-container w3-center">
-        <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small moving-zone" style="z-index:2">
-                <div class="popup">
-                    <div class="popup-text">
-                    <h3>Web Development</h3>
-                    <hr class="w3-border-white" style="margin:auto;width:40%">
-                    <p><b>Front End, Back End, Web Design.</b></p>
-                    </div>
-                </div>
-        </div>
-      </div>
-      <div class="mySlides bgimg2 w3-display-container w3-center">
-            <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small moving-zone" style="z-index:2">
-                    <div class="popup">
-                        <div class="popup-text">
-                        <h3>Software Development</h3>
-                        <hr class="w3-border-white" style="margin:auto;width:40%">
-                        <p><b>Python, Java, C/C++, Language as preferred.</b></p>
-                        </div>
-                </div>
-            </div>
-          </div>
-          <div class="mySlides bgimg3 w3-display-container w3-center">
-                <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small moving-zone" style="z-index:2">
-                        <div class="popup">
-                            <div class="popup-text">
-                            <h3>Tutorials</h3>
-                            <hr class="w3-border-white" style="margin:auto;width:40%">
-                            <p><b>Provide tutorials for CEH, metasploit, guitar, Photoshop.</b></p>
-                            </div>
-                    </div>
-                </div>
-              </div>
-              <div class="w3-center changeimg w3-xlarge w3-text-white">
-                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-              </div>
-              <div class="w3-center switchimg w3-large w3-text-white">
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-                  </div>
-                
-                  <div id="button-container" class="w3-display-bottomright" style="position:absolute;padding-bottom:7%;padding-right:12%;">
-                        <button class="learn-more">
-                          <div class="circle">
-                            <span class="icon arrow"></span>
-                          </div>
-                          <a href="https://www.freelancer.com/u/jewelbarman998" class="button-text">Hire Me</a>
-                        </button>
-                      </div>
-  </div>
-  <div id="projects" class="w3-display-container w3-text-black" style="background-attachment:fixed">
-        <div class="w3-center w3-white w3-text-black" style="height:100%;width:100%;">
-                <canvas></canvas>
-                <div class="absolute-center">
-                        <h3 class="text w3-wide"><b>MY PROJECTS</b></h3>
-                        
-                        <div class="text w3-display-container w3-center"><br><i>I've done a lot of projects and haven't uploaded it, due to several reasons. The ones I had done when I was still a beginner, are as follows:</i>
-                            
-                         <div class="flex flex-wrap -m-3" style="margin: 20px"> 
-                              
-                              
-                              <div class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3">
-                                <div class="rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col" style="background:rgba(0,0,0,0.6)">
-                                  <div class="bg-cover h-48" style="background-image: url('images/chatbot.jpg');"></div>
-                                  <div class="p-4 flex-1 flex flex-col">
-                                    <h3 class="mb-4 text-2xl">Chatbot.py</h3>
-                                    <div class="mb-4 text-grey text-sm flex-1">
-                                      <p>Python3.x Based Chatbot performs certain features.</p>
-                                    </div>
-                                    <a href="https://github.com/jewel998/TracyBot" class="border-t border-grey pt-2 text-xs text-grey hover:text-red uppercase no-underline tracking-wide">GitHub</a>
-                                  </div>
-                                </div>  
-                              </div>
-                              
-                              <div class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3">
-                                <div class="rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col" style="background:rgba(0,0,0,0.6)">
-                                  <div class="bg-cover h-48" style="background-image: url('images/tictactoe.png');"></div>
-                                  <div class="p-4 flex-1 flex flex-col">
-                                    <h3 class="mb-4 text-2xl">TicTacToe.py</h3>
-                                    <div class="mb-4 text-grey text-sm flex-1">
-                                      <p>A Python3.x TicTacToe implementation of TicTacToe with Turtle and Random.</p>
-                                    </div>
-                                    <a href="https://github.com/jewel998/Tic-Tac-Toe" class="border-t border-grey-light pt-2 text-xs text-grey hover:text-red uppercase no-underline tracking-wide">GitHub</a>
-                                  </div>
-                                </div>  
-                              </div>
-                              
-                              <div class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3">
-                                <div class="rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col" style="background:rgba(0,0,0,0.6)">
-                                  <div class="bg-cover h-48" style="background-image: url('images/lockwin.jpg');"></div>
-                                  <div class="p-4 flex-1 flex flex-col">
-                                    <h3 class="mb-4 text-2xl">LockYourWin.py</h3>
-                                    <div class="mb-4 text-grey text-sm flex-1">
-                                      <p>A python GUI virus to temporarily lockup your Windows PC at every startup, unless the desired password is entered.</p>
-                                    </div>
-                                    <a href="https://github.com/jewel998/LockYourWin.py" class="border-t border-grey-light pt-2 text-xs text-grey hover:text-red uppercase no-underline tracking-wide">GitHub</a>
-                                  </div>
-                                </div>  
-                              </div>
-                            </div>
-                            <a href="https://github.com/Jewel998" class="w3-center classy">More on Github</a>
-                          <div class="wrapper">
-                                <h1>Video Links.</h1>
-                                <div class="card" style="background-image: url('https://scontent.fccu7-1.fna.fbcdn.net/v/t15.5256-10/s552x414/23496163_708363799555366_3813230660135419904_n.jpg?_nc_cat=110&_nc_ht=scontent.fccu7-1.fna&oh=2e0af8dd1f2fc5f65ff3c03b1a7edf81&oe=5C8EEA8C')">
-                                  <div class="card__content">
-                                    <a href="https://www.facebook.com/jewel.barman/videos/vb.100011452585726/708362922888787/?type=2&video_source=user_video_tab" class="play-button">
-                                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50">
-                                        <path d="M42.7,42.7L25,50L7.3,42.7L0,25L7.3,7.3L25,0l17.7,7.3L50,25L42.7,42.7z" class="polygon"></path>
-                                        <polygon points="32.5,25 21.5,31.4 21.5,18.6 "></polygon>
-                                      </svg>
-                                    </a>
-                                    <div class="card__content--description">
-                                      <h3 class="roll-up">
-                                        <span><span>P</span><span>P</span></span>
-                                        <span><span>l</span><span>l</span></span>
-                                        <span><span>a</span><span>a</span></span>
-                                        <span><span>y</span><span>y</span></span>
-                                      </h3>
-                                      <p class="text-reveal">
-                                        <span>
-                                          <span>Yumetorou</span>
-                                          <span>from the movie - "Your Name"</span>
-                                          <span>Fingerstyle Guitar</span>
-                                        </span>
-                                        <span>
-                                          <span><span>Yumetorou</span></span>
-                                          <span><span>from the movie - "Your Name"</span></span>
-                                          <span><span>Fingerstyle Guitar</span></span>
-                                        </span>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card" style="background-image: url('https://scontent.fccu7-1.fna.fbcdn.net/v/t15.5256-10/s552x414/27598709_778876429170769_7098736167465517056_n.jpg?_nc_cat=111&_nc_ht=scontent.fccu7-1.fna&oh=a86de73296a12450e5c5ce2238a6489c&oe=5C962139');">
-                                  <div class="card__content">
-                                    <a href="https://www.facebook.com/jewel.barman/videos/778873605837718/" class="play-button">
-                                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50">
-                                        <path d="M42.7,42.7L25,50L7.3,42.7L0,25L7.3,7.3L25,0l17.7,7.3L50,25L42.7,42.7z" class="polygon"></path>
-                                        <polygon points="32.5,25 21.5,31.4 21.5,18.6 "></polygon>
-                                      </svg>
-                                    </a>
-                                    <div class="card__content--description">
-                                      <h3 class="roll-up">
-                                        <span><span>G</span><span>G</span></span>
-                                        <span><span>L</span><span>L</span></span>
-                                        <span><span>I</span><span>I</span></span>
-                                        <span><span>T</span><span>T</span></span>
-                                        <span><span>C</span><span>C</span></span>
-                                        <span><span>H</span><span>H</span></span>
-                                      </h3>
-                                      <p class="text-reveal">
-                                        <span>
-                                          <span>Watch the glitch effect</span>
-                                          <span>I made in After Effects</span>
-                                        </span>
-                                        <span>
-                                          <span><span>Watch the glitch effect</span></span>
-                                          <span><span>I made in After Effects</span></span>
-                                        </span>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card" style="background-image: url('https://scontent.fccu7-1.fna.fbcdn.net/v/t15.5256-10/s552x414/23437480_707237723001307_3827126502835617792_n.jpg?_nc_cat=108&_nc_ht=scontent.fccu7-1.fna&oh=ca528ee984c20ca3207d2cfc72884a80&oe=5CD87C7C');">
-                                  <div class="card__content">
-                                    <a href="https://www.facebook.com/jewel.barman/videos/vb.100011452585726/707236766334736/?type=2&video_source=user_video_tab" class="play-button">
-                                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50">
-                                        <path d="M42.7,42.7L25,50L7.3,42.7L0,25L7.3,7.3L25,0l17.7,7.3L50,25L42.7,42.7z" class="polygon"></path>
-                                        <polygon points="32.5,25 21.5,31.4 21.5,18.6 "></polygon>
-                                      </svg>
-                                    </a>
-                                    <div class="card__content--description">
-                                      <h3 class="roll-up">
-                                            <h3 class="roll-up">
-                                              <span><span>P</span><span>P</span></span>
-                                              <span><span>l</span><span>l</span></span>
-                                              <span><span>a</span><span>a</span></span>
-                                              <span><span>y</span><span>y</span></span>
-                                            </h3>
-                                      <p class="text-reveal">
-                                        <span>
-                                          <span>River Flows In You</span>
-                                          <span>Yiruma's Fingerstyle Cover</span>
-                                        </span>
-                                        <span>
-                                          <span><span>River Flows In You</span></span>
-                                          <span><span>Yiruma's Fingerstyle Cover</span></span>
-                                        </span>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card" style="background-image: url('https://scontent.fccu7-1.fna.fbcdn.net/v/t15.5256-10/s552x414/23383025_707222503002829_403051177144483840_n.jpg?_nc_cat=104&_nc_ht=scontent.fccu7-1.fna&oh=3aa69460442968f8063d354fc9f76502&oe=5CCEFA7D');">
-                                  <div class="card__content">
-                                    <a href="https://www.facebook.com/jewel.barman/videos/vb.100011452585726/707221883002891/?type=2&video_source=user_video_tab" class="play-button">
-                                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50">
-                                        <path d="M42.7,42.7L25,50L7.3,42.7L0,25L7.3,7.3L25,0l17.7,7.3L50,25L42.7,42.7z" class="polygon"></path>
-                                        <polygon points="32.5,25 21.5,31.4 21.5,18.6 "></polygon>
-                                      </svg>
-                                    </a>
-                                    <div class="card__content--description">
-                                      <h3 class="roll-up">
-                                            <h3 class="roll-up">
-                                              <span><span>P</span><span>P</span></span>
-                                              <span><span>l</span><span>l</span></span>
-                                              <span><span>a</span><span>a</span></span>
-                                              <span><span>y</span><span>y</span></span>
-                                            </h3>
-                                      <p class="text-reveal">
-                                        <span>
-                                          <span>Thousand Years</span>
-                                          <span>Fingerstyle Cover</span>
-                                        </span>
-                                        <span>
-                                          <span><span>Thousand Years</span></span>
-                                          <span><span>Fingerstyle Cover</span></span>
-                                        </span>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                        
-                        <span id="close"><i class="fa fa-fw fa-times-circle-o"></i></span>
-                </div>
-        </div>
-  </div>
-
-  <div id="contact" class="w3-display-container">
-      <div class="w3-display-bottomright nocard" style="position:absolute;padding-bottom:5%;padding-right:5%;z-index:99">
-          <a class="w3-circle w3-jumbo filterbutton snapchat" onclick="toggleFilter()"><i class="fa fa-snapchat"></i></a>
-          <p class="text-reveal text-grey-darker">
-                <span>
-                  <span>Press the Icon to Add Filter</span>
-                  <span>Follow me on Snapchat</span>
-                  <span>jewel.barman</span>
-                </span>
-                <span>
-                  <span><span>Press the Icon to Add Filter</span></span>
-                  <span><span>Follow me on Snapchat</span></span>
-                  <span><span>jewel.barman</span></span>
-                </span>
-              </p>
-      </div>
-      <div id="contact" class="w3-display-container">
-            <div class="w3-display-bottomleft nocard" style="position:absolute;padding-bottom:5%;padding-left:5%;z-index:98">
-                <a class="w3-circle w3-jumbo filterbutton quora" href="https://quora.com/Jewel-Barman-3"><i class="fa fa-quora"></i></a>
-                <p class="text-reveal text-grey-darker">
-                      <span>
-                        <span>Press the Icon to</span>
-                        <span>ask me questions on Quora</span>
-                        <span>Jewel-Barman-3</span>
-                      </span>
-                      <span>
-                        <span><span>Press the Icon to</span></span>
-                        <span><span>ask me questions on Quora</span></span>
-                        <span><span>Jewel-Barman-3</span></span>
-                      </span>
-                    </p>
-            </div>
-    
-        <div class="stairs-wrapper" style="position:absolute;height:100%;width:100%">
-                <img class="stars stars-animation" src="images/background.png">
-                <img class="stars stars-animation-two" src="images/background.png">
-                <img class="stars stars-animation-three" src="images/background.png">
-        </div>
-        <div class="filter" style="position:absolute;display:none;">
-            <div class="scanlines"></div>
-
-            <div class="intro-wrap">
-	            <div class="noise"></div>
-            	<div class="noise noise-moving"></div>
-	            <div class="play" data-splitting>PLAY</div>
-	            <div class="time">--:--</div>
-	            <div class="recordSpeed">SLP 0:00:00</div>
-            </div>
-            </div>
-        <section class="wrapper3 w3-display-middle w3-center">
-                <div class="card3" data-effect="color">
-                  <button class="card__save  js-save" type="button">
-                    <i class="fa fa-bookmark"></i>
-                   </button>
-                  <figure  class="card__image" style="height:100%;width:100%;">
-                    <img src="images/card.jpg" alt="Short description">
-                  </figure>
-                  <div class="card__header">
-                    <figure class="card__profile">
-                      <img src="images/me.jpg" alt="Short description">
-                    </figure>
-                  </div>
-                  <div class="card__body">
-                    <h3 class="card__name">Jewel Barman</h3>
-                    <p class="card__job">student</p>
-                    <p class="card__bio">Computer Science Undergrad from MNNIT, Allahabad</p>
-                  </div>
-                  <div class="card__footer">
-                    <p class="card__date">Jan 1 2019</p>
-                    <p class=""></p>
-                  </div>
-                </div>
-                <!-- END: card -->
-                
-              </section>
-  </div>
-      <!-- scripts -->
-      <script src="JS/intro.js"></script>
-      <script src="JS/audio.js"></script>
-      <script src="JS/rotate.js"></script>
-      <script src="JS/canvas.js"></script>
-      <script src="JS/particles.js"></script>
-      <script src="JS/app.js"></script>
-      <script src="JS/3D.js"></script>
-<script>
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-var slideIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    x[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " w3-white"; 
-    setTimeout(carousel, 4000); // Change image every 2 seconds
-}
-
-        window.addEventListener("load", function(){
-            const loader = document.querySelector(".lds-ripple");
-            loader.className += " hide";
-            var p = document.getElementById("Leave Like That");
-            p.play();
-            $('[class^=story-text]').addClass("start");
-            setTimeout(function(){intro1();},5000);
-        });
-        $("#spinner-form2").click( function(){
-            $('#overlay-content').height(function(){
-                if($('#overlay-content').height() > 0) $('#overlay-content').height("0%");
-                else $('#overlay-content').height("100%");
-            });
-        });
-        var width = $(window).width(); 
-        var height = $(window).height();
-        if ((width >= 1024  ) && (height>=600)) {
-            $('.moving-zone').css("left","30%")
-            $('#typer1').addClass("glitch");
-            $('#typer2').show();
-            $('#typer3').show();
-            $('#date1').addClass("glitch");
-            $('#date2').show();
-            $('#date3').show();
-            $('.player').css('bottom','40%');
-            $('.player').css('left','15%');
-            $('[class^=story-text]').css('height','7.2%');
-            $('[class^=story-text]').css('font-size','3.6vw');
-            $('.player').show();
-        }
-        else {
-            $('#typer2').hide();
-            $('#typer3').hide();
-            $('#date2').hide();
-            $('#date3').hide();
-        }
-        $('#turnon').click( function(){
-            $('#text').show();
-        });
-        $('#turnoff1').click( function(){
-            $('#text').hide();
-        });
-        $('#turnoff2').click( function(){
-            $('#text').hide();
-        });
-        $('#turnoff3').click( function(){
-            $('#text').hide();
-        });
-        $('#turnoff4').click( function(){
-            $('#text').hide();
-        });
-        if(height>=770){
-            $('.player').show();
-        }
-
-</script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Senior Software Developer with over 4 years of experience in full-stack development, software architecture, and team leadership. Expertise in Typescript, JavaScript, NodeJs, Python, Java, and cloud platforms like AWS and GCP. Proven track record in designing scalable solutions and leading development teams to success."
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Jyotirmoy Barman</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/assets/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/assets/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/assets/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-BGQqM-OH.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DnuC0Dx1.css">
+  </head>
+  <body>
+    <noscript>
+      I am a highly experienced Senior Software Developer with over 4 years in
+      the industry, specializing in full-stack development, software
+      architecture, and team leadership. My expertise spans across various
+      programming languages, frameworks, and technologies, allowing me to
+      deliver robust and scalable solutions. I am passionate about coding,
+      problem-solving, and continuously learning to stay at the forefront of
+      technological advancements. [ Please enable JavaScript to run this app. ]
+    </noscript>
+    <div id="root"></div>
+  </body>
 </html>
