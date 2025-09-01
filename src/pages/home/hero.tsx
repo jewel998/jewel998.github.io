@@ -1,9 +1,10 @@
 import { Marquee, MarqueeFade } from "@/components/ui/marquee";
 import { ExternalLink, Sparkle } from "lucide-react";
 import personal from "@/data/personal.json";
-import { HomeSection } from "./section";
+import { HomeSection } from "@/layouts/home/section";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 export function HomeHero() {
   return (
@@ -17,7 +18,7 @@ export function HomeHero() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+        <h1 className="hero-title font-clash font-medium text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight">
           Building <span className="text-primary">systems</span>
           <br />
           that <span className="text-primary">scale & perform</span>.
@@ -26,10 +27,11 @@ export function HomeHero() {
         {/* Description */}
         <div className="hero-description mb-8">
           <div className="flex flex-col md:flex-row items-center gap-4 w-full">
-            <div className="flex-auto h-0.25 w-full bg-slate-200"></div>
+            <Separator className="flex-auto" />
             <p className="w-full md:max-w-lg text-sm text-muted-foreground leading-relaxed">
-              Turning complex challenges into elegant software solutions that
-              scale and deliver impact.
+              Turning complex challenges into elegant, scalable software
+              solutions that not only deliver measurable impact but also drive
+              long-term growth and innovation.
             </p>
           </div>
         </div>
@@ -74,9 +76,9 @@ export function HomeHero() {
         </div>
       </div>
       <section className="relative mt-16">
-        <div className="border-y pt-3 pb-4 md:pb-6">
+        <div className="border-y py-3 md:pb-4">
           <Marquee
-            scrollerClassName="items-center opacity-15 md:text-[4.4rem] md:leading-[5.2rem]"
+            scrollerClassName="items-center opacity-15 font-clash font-medium md:text-[4.4rem] md:leading-[5.2rem]"
             texts={[
               <div className="flex flex-row gap-8 items-center px-4">
                 <span>Architecture</span>

@@ -1,5 +1,5 @@
 import { Chip } from "@/components/ui/chip";
-import { HomeSection } from "./section";
+import { HomeSection } from "@/layouts/home/section";
 import { Plus } from "@/components/ui/plus";
 import { Dot } from "@/components/ui/dot";
 import { Link } from "@tanstack/react-router";

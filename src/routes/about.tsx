@@ -1,4 +1,5 @@
-import { HomeLayout } from "@/pages/layouts/home";
+import { HomeLayout } from "@/layouts/home";
+import { About } from "@/pages/about";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/about")({
@@ -6,5 +7,9 @@ export const Route = createFileRoute("/about")({
 });
 
 function RouteComponent() {
-  return <HomeLayout></HomeLayout>;
+  return (
+    <HomeLayout>
+      <About />
+    </HomeLayout>
+  );
 }

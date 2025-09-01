@@ -2,14 +2,15 @@ import { HomeContact } from "./contact";
 import { HomeFooter } from "./footer";
 import { HomeHero } from "./hero";
 import { HomeExpertise } from "./expertise";
+import { HomeLayoutPage } from "@/layouts/home";
 
 export function Home() {
   return (
-    <div className="bg-background border border-t-0 relative">
+    <HomeLayoutPage>
       <HomeHero />
       <HomeExpertise />
       <HomeContact />
       <HomeFooter />
-    </div>
+    </HomeLayoutPage>
   );
 }

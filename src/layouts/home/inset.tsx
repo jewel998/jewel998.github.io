@@ -21,7 +21,7 @@ export function HomeInset({ side }: VariantProps<typeof variants>) {
     () => (side === "top" ? [0, 0.1] : [0.9, 1]),
     [side]
   );
-  const value = useMemo(() => (side === "top" ? [1, 1] : [1, 0]), [side]);
+  const value = useMemo(() => (side === "top" ? [0, 1] : [1, 0]), [side]);
   const opacity = useTransform(scrollYProgress, threshold, value);
   return <motion.div className={cn(variants({ side }))} style={{ opacity }} />;
 }

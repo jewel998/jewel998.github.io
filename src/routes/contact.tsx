@@ -1,4 +1,5 @@
-import { HomeLayout } from "@/pages/layouts/home";
+import { HomeLayout } from "@/layouts/home";
+import { Contact } from "@/pages/contact";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/contact")({
@@ -6,5 +7,9 @@ export const Route = createFileRoute("/contact")({
 });
 
 function RouteComponent() {
-  return <HomeLayout></HomeLayout>;
+  return (
+    <HomeLayout>
+      <Contact />
+    </HomeLayout>
+  );
 }

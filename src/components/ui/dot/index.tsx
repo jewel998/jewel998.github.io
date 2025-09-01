@@ -38,13 +38,17 @@ export function Dot({
       {ping && (
         <span
           className={cn(
-            "absolute h-full w-full animate-ping rounded-full opacity-75",
+            "absolute flex h-full w-full animate-ping rounded-full opacity-75",
             pingColor ?? color
           )}
         ></span>
       )}
       <span
-        className={cn("relative w-full h-full rounded-full", color, className)}
+        className={cn(
+          "relative flex w-full h-full rounded-full",
+          color,
+          className
+        )}
       ></span>
     </span>
   );

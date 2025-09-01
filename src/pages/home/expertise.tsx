@@ -1,5 +1,5 @@
 import { Marquee, MarqueeFade } from "@/components/ui/marquee";
-import { HomeSection } from "./section";
+import { HomeSection } from "@/layouts/home/section";
 import technologies from "@/data/technologies.json";
 import { useMemo } from "react";
 import { Chip } from "@/components/ui/chip";
