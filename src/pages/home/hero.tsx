@@ -1,7 +1,9 @@
-import { Marquee } from "@/components/ui/marquee";
+import { Marquee, MarqueeFade } from "@/components/ui/marquee";
 import { ExternalLink, Sparkle } from "lucide-react";
 import personal from "@/data/personal.json";
 import { HomeSection } from "./section";
+import { Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 
 export function HomeHero() {
   return (
@@ -16,9 +18,9 @@ export function HomeHero() {
 
         {/* Main Heading */}
         <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-          Building <span className="text-emerald-500">systems</span>
+          Building <span className="text-primary">systems</span>
           <br />
-          that <span className="text-emerald-500">scale & perform</span>.
+          that <span className="text-primary">scale & perform</span>.
         </h1>
 
         {/* Description */}
@@ -36,41 +38,43 @@ export function HomeHero() {
         <div className="hero-buttons flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           {/* Social Links */}
           <div className="flex flex-wrap gap-6">
-            <a
-              href={`https://${personal.linkedin}`}
+            <Link
+              to={`https://${personal.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
             >
               <span className="text-sm uppercase tracking-wider">LinkedIn</span>
               <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </a>
-            <a
-              href={`https://${personal.github}`}
+            </Link>
+            <Link
+              to={`https://${personal.github}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
             >
               <span className="text-sm uppercase tracking-wider">GitHub</span>
               <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </a>
-            <a
-              href={`mailto:${personal.email}`}
+            </Link>
+            <Link
+              to={`mailto:${personal.email}`}
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
             >
               <span className="text-sm uppercase tracking-wider">Email</span>
               <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </a>
+            </Link>
           </div>
 
           {/* CTA Button */}
-          <button className="bg-transparent border border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-3 font-medium transition-all duration-300">
-            <a href="/about">Know me better</a>
-          </button>
+          <Link to="/about">
+            <Button className="bg-transparent border border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-3 font-medium transition-all duration-300">
+              Know me better
+            </Button>
+          </Link>
         </div>
       </div>
       <section className="relative mt-16">
-        <div className="border-y pt-3 pb-6">
+        <div className="border-y pt-3 pb-4 md:pb-6">
           <Marquee
             scrollerClassName="items-center opacity-15 md:text-[4.4rem] md:leading-[5.2rem]"
             texts={[
@@ -89,8 +93,8 @@ export function HomeHero() {
             ]}
           />
         </div>
-        <div className="absolute top-0 left-0 w-[35%] h-full bg-linear-to-r from-background to-transparent"></div>
-        <div className="absolute top-0 right-0 w-[35%] h-full bg-linear-to-l from-background to-transparent"></div>
+        <MarqueeFade side="left" className="from-background" />
+        <MarqueeFade side="right" className="from-background" />
       </section>
     </HomeSection>
   );

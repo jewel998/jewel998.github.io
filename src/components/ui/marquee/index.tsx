@@ -7,6 +7,7 @@ import React, {
   useLayoutEffect,
   useState,
   type ReactNode,
+  type ComponentProps,
 } from "react";
 import {
   motion,
@@ -18,6 +19,7 @@ import {
   useAnimationFrame,
 } from "motion/react";
 import { cn } from "@/lib";
+import { cva, type VariantProps } from "class-variance-authority";
 
 interface VelocityMapping {
   input: [number, number];
@@ -199,4 +201,27 @@ export function Marquee({
       ))}
     </>
   );
+}
+
+const variants = cva(
+  "absolute top-0 w-[35%] h-full to-transparent pointer-events-none",
+  {
+    variants: {
+      side: {
+        left: "bg-linear-to-r left-0",
+        right: "bg-linear-to-l right-0",
+      },
+    },
+    defaultVariants: {
+      side: "left",
+    },
+  }
+);
+
+interface MarqueeFadeProps
+  extends ComponentProps<"div">,
+    VariantProps<typeof variants> {}
+
+export function MarqueeFade({ side, className }: MarqueeFadeProps) {
+  return <div className={cn(variants({ side }), className)}></div>;
 }

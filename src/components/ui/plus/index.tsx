@@ -1,6 +1,7 @@
 import type { VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
 import { cva } from "class-variance-authority";
+import { cn } from "@/lib";
 
 const variants = cva("z-50", {
   variants: {
@@ -47,7 +48,7 @@ export function Plus({ rel, position, className, ...props }: PlusProps) {
       width="5"
       height="5"
       viewBox="0 0 5 5"
-      className={variants({ rel, position, className })}
+      className={cn(variants({ rel, position, className }))}
       {...props}
     >
       <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>

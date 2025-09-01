@@ -1,5 +1,6 @@
 import type { ComponentProps } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib";
 
 const variants = cva(
   "cursor-pointer disabled:cursor-disabled transition-colors",
@@ -33,6 +34,6 @@ interface ButtonProps
 
 export function Button({ variant, size, className, ...props }: ButtonProps) {
   return (
-    <button className={variants({ variant, size, className })} {...props} />
+    <button className={cn(variants({ variant, size, className }))} {...props} />
   );
 }

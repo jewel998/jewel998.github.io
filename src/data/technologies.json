@@ -1,0 +1,175 @@
+{
+  "languages": [
+    {
+      "name": "JavaScript",
+      "logo": "/assets/tech/javascript.png",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "name": "TypeScript",
+      "logo": "/assets/tech/typescript.svg",
+      "href": "https://www.typescriptlang.org/"
+    },
+    {
+      "name": "Java",
+      "logo": "/assets/tech/java.png",
+      "href": "https://www.oracle.com/java/"
+    },
+    {
+      "name": "SQL",
+      "logo": "/assets/tech/sql.svg",
+      "href": "https://en.wikipedia.org/wiki/SQL"
+    },
+    {
+      "name": "Bash",
+      "logo": "/assets/tech/terminal.png",
+      "href": "https://www.gnu.org/software/bash/"
+    },
+    {
+      "name": "PHP",
+      "logo": "/assets/tech/php.svg",
+      "href": "https://www.php.net/"
+    }
+  ],
+  "cloud": [
+    {
+      "name": "AWS",
+      "logo": "/assets/tech/aws.svg",
+      "href": "https://aws.amazon.com/"
+    },
+    {
+      "name": "GCP",
+      "logo": "/assets/tech/gcp.svg",
+      "href": "https://cloud.google.com/"
+    }
+  ],
+  "backend": [
+    {
+      "name": "Node.js",
+      "logo": "/assets/tech/node.svg",
+      "href": "https://nodejs.org/"
+    },
+    {
+      "name": "Express.js",
+      "logo": "/assets/tech/express.png",
+      "href": "https://expressjs.com/"
+    },
+    {
+      "name": "Fastify",
+      "logo": "/assets/tech/fastify.png",
+      "href": "https://www.fastify.io/"
+    },
+    {
+      "name": "NestJs",
+      "logo": "/assets/tech/nest.svg",
+      "href": "https://nestjs.com/"
+    },
+    {
+      "name": "SQL",
+      "logo": "/assets/tech/sql.svg",
+      "href": "https://en.wikipedia.org/wiki/SQL"
+    },
+    {
+      "name": "NoSQL",
+      "logo": "/assets/tech/nosql.svg",
+      "href": "https://en.wikipedia.org/wiki/NoSQL"
+    },
+    {
+      "name": "GraphQL",
+      "logo": "/assets/tech/graphql.svg",
+      "href": "https://graphql.org/"
+    }
+  ],
+  "frontend": [
+    {
+      "name": "HTML",
+      "logo": "/assets/tech/html.svg",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "name": "CSS",
+      "logo": "/assets/tech/css.svg",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "name": "SCSS",
+      "logo": "/assets/tech/sass.svg",
+      "href": "https://sass-lang.com/"
+    },
+    {
+      "name": "Tailwind",
+      "logo": "/assets/tech/tailwind.svg",
+      "href": "https://tailwindcss.com/"
+    },
+    {
+      "name": "React.js",
+      "logo": "/assets/tech/react.svg",
+      "href": "https://react.dev/"
+    },
+    {
+      "name": "Angular",
+      "logo": "/assets/tech/angular.svg",
+      "href": "https://angular.io/"
+    },
+    {
+      "name": "Ionic",
+      "logo": "/assets/tech/ionic.webp",
+      "href": "https://ionicframework.com/"
+    },
+    {
+      "name": "Capacitor",
+      "logo": "/assets/tech/capacitor.svg",
+      "href": "https://capacitorjs.com/"
+    },
+    {
+      "name": "React Native",
+      "logo": "/assets/tech/react.svg",
+      "href": "https://reactnative.dev/"
+    },
+    {
+      "name": "Next.js",
+      "logo": "/assets/tech/next.svg",
+      "href": "https://nextjs.org/"
+    },
+    {
+      "name": "Vite",
+      "logo": "/assets/tech/vite.svg",
+      "href": "https://vitejs.dev/"
+    }
+  ],
+  "quality": [
+    {
+      "name": "Swagger",
+      "logo": "/assets/tech/swagger.svg",
+      "href": "https://swagger.io/"
+    },
+    {
+      "name": "Docusaurus",
+      "logo": "/assets/tech/docusaurus.svg",
+      "href": "https://docusaurus.io/"
+    },
+    {
+      "name": "Commitlint",
+      "logo": "/assets/tech/commitlint.png",
+      "href": "https://commitlint.js.org/"
+    },
+    {
+      "name": "ESLint",
+      "logo": "/assets/tech/eslint.png",
+      "href": "https://eslint.org/"
+    },
+    {
+      "name": "Prettier",
+      "logo": "/assets/tech/prettier.png",
+      "href": "https://prettier.io/"
+    },
+    {
+      "name": "Changelog",
+      "href": "https://keepachangelog.com/"
+    },
+    {
+      "name": "Husky",
+      "href": "https://typicode.github.io/husky/"
+    }
+  ]
+}

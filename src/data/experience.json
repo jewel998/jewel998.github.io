@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Senior Software Engineer",
+    "company": "Pocketpills",
+    "location": "Gurugram, IN",
+    "period": "Feb 2025 – Present",
+    "description": "Led the architecture and development of a multi-tenant EMR platform using NestJS, React.js, RabbitMQ, and TanStack, enabling doctors to generate AI-assisted prescriptions with role-based access control and real-time monitoring via SessionStack, Mixpanel and Sentry.",
+    "achievements": [
+      "Delivered a scalable, production-ready system from scratch in under 4 months, reducing prescription and note-writing time by 40–50%",
+      "Managed and mentored a team of 3 developers, driving clean architecture, fast release cycles, and collaborative workflows"
+    ]
+  },
+  {
+    "title": "Co Founder & CTO",
+    "company": "DailyDumbbell",
+    "location": "Raipur, IN",
+    "period": "May 2024 – Jan 2025",
+    "description": "Built and launched DailyDumbbell's full-stack fitness platform (web, dashboard, mobile app) using React.js, Angular, NestJS, Ionic, MongoDB, and AWS/GCP, enabling daily gym subscriptions, user engagement tracking, and scalable B2B2C operations.",
+    "achievements": [
+      "Designed a robust multi-tenant cloud architecture with deep linking, product versioning, role-based access, and automation",
+      "Integrated payments (Cashfree, PhonePe), marketing automation, and SEO-optimized Markdown content workflows"
+    ]
+  },
+  {
+    "title": "Senior Member of Technical Staff",
+    "company": "now.gg",
+    "location": "Gurugram, IN",
+    "period": "Nov 2020 – April 2024",
+    "description": "Reduced infrastructure costs by 60% through efficient AWS resource management, improving resource availability and ensuring robust security protocols for end-users.",
+    "achievements": [
+      "Developed WebRTC-based solutions, connecting backend resources to client devices and creating reusable widgets, reducing latency by 30%",
+      "Designed and deployed microservices, streamlining inter-team dependencies and increasing platform scalability by 40%"
+    ]
+  },
+  {
+    "title": "Member of Technical Staff",
+    "company": "BlueStacks",
+    "location": "Gurugram, IN",
+    "period": "Jul 2020 – Nov 2020",
+    "description": "Reduced First Contentful Paint (FCP) time by 30%, improving load times and enhancing overall user experience, leading to a 15% increase in user retention.",
+    "achievements": [
+      "Enhanced in-app purchase systems, enabling seamless payment functionality and optimizing monetization strategy, resulting in 25% increase in revenue",
+      "Integrated Agora voice chat functionality, improving real-time communication and user interactions, boosting engagement by 20%"
+    ]
+  }
+]

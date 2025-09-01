@@ -2,14 +2,14 @@ import { cn } from "@/lib";
 import { cva, type VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
 
-const variants = cva("relative flex", {
+const variants = cva("relative", {
   variants: {
     size: {
       xs: "size-1",
-      sm: "size-2",
-      md: "size-3",
-      lg: "size-4",
-      xl: "size-5",
+      sm: "size-1.5",
+      md: "size-2",
+      lg: "size-2.5",
+      xl: "size-3",
     },
   },
   defaultVariants: {
@@ -34,21 +34,17 @@ export function Dot({
   ...props
 }: DotProps) {
   return (
-    <span className={variants({ size })} {...props}>
+    <span className={cn(variants({ size, className }))} {...props}>
       {ping && (
         <span
           className={cn(
-            "absolute inline-flex h-full w-full animate-ping rounded-full opacity-75",
+            "absolute h-full w-full animate-ping rounded-full opacity-75",
             pingColor ?? color
           )}
         ></span>
       )}
       <span
-        className={cn(
-          "relative inline-flex w-full h-full rounded-full",
-          color,
-          className
-        )}
+        className={cn("relative w-full h-full rounded-full", color, className)}
       ></span>
     </span>
   );

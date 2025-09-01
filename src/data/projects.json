@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Comparison of Time-Series Forecasting Models",
+    "description": "Compared time-series forecasting models including AR, ARMA, ARIMA, ARMAX, SVR, KRR, and SMOReg, evaluating performance on real datasets using RMSE and MAE as key metrics.",
+    "tools": ["Python", "AI/ML"]
+  },
+  {
+    "title": "Textbook Lending Bank",
+    "description": "Developed and managed a textbook lending system for college students, streamlining inventory tracking, lending, and returns to promote resource sharing and reduce academic costs. Implemented role-based access for admins and borrowers with automated lending limits, reminders, and database-backed book availability.",
+    "tools": ["HTML", "CSS", "PHP"]
+  },
+  {
+    "title": "Lyrics Synchronized Music Player",
+    "description": "Built a web-based music playlist application with real-time lyrics synchronization, enabling a seamless audio experience. Designed an intuitive interface with support for timestamped lyrics parsing, playback control, and dynamic highlighting.",
+    "tools": ["HTML", "CSS", "React.js"],
+    "github": "github"
+  }
+]

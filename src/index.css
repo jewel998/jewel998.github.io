@@ -6,17 +6,21 @@
   --background: #fff;
   --foreground: #000;
   --border: #e5e7eb;
-  --primary: var(--color-emerald-500);
+  --primary: #30af5b;
+  --primary-foreground: #fff;
+  --secondary: #f7f8fa;
   @supports (color: color-mix(in lab, red, red)) {
     --pattern-fg: color-mix(in oklab, #000 5%, transparent);
   }
 }
 
 .dark {
-  --background: #0f172a;
+  --background: var(--color-slate-950);
   --foreground: #f1f5f9;
   --border: #334155;
-  --primary: var(--color-emerald-500);
+  --primary: #30af5b;
+  --primary-foreground: #fff;
+  --secondary: var(--color-slate-900);
   @supports (color: color-mix(in lab, red, red)) {
     --pattern-fg: color-mix(in oklab, #fff 5%, transparent);
   }
@@ -27,6 +31,8 @@
   --color-foreground: var(--foreground);
   --color-border: var(--border);
   --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
 }
 
 @layer base {

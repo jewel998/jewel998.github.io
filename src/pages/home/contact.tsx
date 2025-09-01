@@ -2,6 +2,7 @@ import { Chip } from "@/components/ui/chip";
 import { HomeSection } from "./section";
 import { Plus } from "@/components/ui/plus";
 import { Dot } from "@/components/ui/dot";
+import { Link } from "@tanstack/react-router";
 
 export function HomeContact() {
   return (
@@ -10,7 +11,10 @@ export function HomeContact() {
         <div className="text-center space-y-8">
           <div className="space-y-6">
             <div className="flex items-center justify-center gap-3">
-              <Chip className="border-primary/40 text-emerald-800 dark:text-emerald-200 bg-lime-50 dark:bg-lime-950">
+              <Chip
+                variant="dashed"
+                className="border-primary/40 text-emerald-800 dark:text-emerald-200 bg-lime-50 dark:bg-lime-950"
+              >
                 <Dot
                   color="bg-emerald-500 dark:bg-emerald-400"
                   ping
@@ -32,7 +36,7 @@ export function HomeContact() {
           <div className="flex justify-center pt-8">
             <div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 font-medium transition-all duration-200">
-                <a href="/contact">Get In Touch</a>
+                <Link to="/contact">Get In Touch</Link>
               </button>
             </div>
           </div>
