@@ -41,7 +41,7 @@ export function HomeHero() {
           {/* Social Links */}
           <div className="flex flex-wrap gap-6">
             <Link
-              to={`https://${personal.linkedin}`}
+              to={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
@@ -50,7 +50,7 @@ export function HomeHero() {
               <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>
             <Link
-              to={`https://${personal.github}`}
+              to={personal.github}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"

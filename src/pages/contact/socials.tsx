@@ -28,7 +28,7 @@ function Social({ href, icon: Icon, className }: SocialProps) {
       className={cn("hover:text-primary", className)}
       aria-label="social"
     >
-      {Icon && <Icon className="size-4 md:size-5" />}
+      {Icon && <Icon className="size-5" />}
     </a>
   );
 }

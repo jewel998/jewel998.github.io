@@ -1,9 +1,9 @@
 import { HomeLayoutPage } from "@/layouts/home";
-import { Sparkle } from "lucide-react";
 import { HomeSection } from "@/layouts/home/section";
 import { HomeFooter } from "@/pages/home/footer";
 import CircularText from "@/components/ui/circular-text";
 import { Socials } from "./socials";
+import { HomeHeading } from "@/layouts/home/heading";
 
 export function Contact() {
   return (
@@ -19,11 +19,8 @@ export function Contact() {
           />
         </div>
         <div className="mt-12">
-          <div className="font-clash flex items-center gap-2 text-primary uppercase text-xs md:text-sm">
-            <Sparkle className="size-2.5 md:size-3" />
-            <p>Get in touch</p>
-          </div>
-          <div className="text-3xl md:text-4xl font-clash mt-2">
+          <HomeHeading>Get in touch</HomeHeading>
+          <div className="text-3xl md:text-4xl font-clash font-medium mt-2">
             <p>Let’s build something that scales and performs.</p>
           </div>
           <div className="mt-4 space-y-4 text-sm/6 md:text-base/8">

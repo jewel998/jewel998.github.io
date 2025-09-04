@@ -1,7 +1,9 @@
 [
   {
     "title": "Senior Software Engineer",
+    "logo": "/assets/brands/pocketpills.png",
     "company": "Pocketpills",
+    "website": "https://pocketpills.com",
     "location": "Gurugram, IN",
     "period": "Feb 2025 – Present",
     "description": "Led the architecture and development of a multi-tenant EMR platform using NestJS, React.js, RabbitMQ, and TanStack, enabling doctors to generate AI-assisted prescriptions with role-based access control and real-time monitoring via SessionStack, Mixpanel and Sentry.",
@@ -12,7 +14,9 @@
   },
   {
     "title": "Co Founder & CTO",
+    "logo": "/assets/brands/dailydumbbell.png",
     "company": "DailyDumbbell",
+    "website": "https://dailydumbbell.in",
     "location": "Raipur, IN",
     "period": "May 2024 – Jan 2025",
     "description": "Built and launched DailyDumbbell's full-stack fitness platform (web, dashboard, mobile app) using React.js, Angular, NestJS, Ionic, MongoDB, and AWS/GCP, enabling daily gym subscriptions, user engagement tracking, and scalable B2B2C operations.",
@@ -23,7 +27,9 @@
   },
   {
     "title": "Senior Member of Technical Staff",
+    "logo": "/assets/brands/nowgg.png",
     "company": "now.gg",
+    "website": "https://now.gg",
     "location": "Gurugram, IN",
     "period": "Nov 2020 – April 2024",
     "description": "Reduced infrastructure costs by 60% through efficient AWS resource management, improving resource availability and ensuring robust security protocols for end-users.",
@@ -34,7 +40,9 @@
   },
   {
     "title": "Member of Technical Staff",
+    "logo": "/assets/brands/bluestacks.png",
     "company": "BlueStacks",
+    "website": "https://bluestacks.com",
     "location": "Gurugram, IN",
     "period": "Jul 2020 – Nov 2020",
     "description": "Reduced First Contentful Paint (FCP) time by 30%, improving load times and enhancing overall user experience, leading to a 15% increase in user retention.",

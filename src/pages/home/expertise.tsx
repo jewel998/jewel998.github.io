@@ -11,6 +11,7 @@ export function HomeExpertise() {
       ...technologies.languages,
       ...technologies.backend,
       ...technologies.frontend,
+      ...technologies.collaboration,
       ...technologies.quality,
     ],
     []

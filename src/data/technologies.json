@@ -16,9 +16,9 @@
       "href": "https://www.oracle.com/java/"
     },
     {
-      "name": "SQL",
+      "name": "PostgreSQL",
       "logo": "/assets/tech/sql.svg",
-      "href": "https://en.wikipedia.org/wiki/SQL"
+      "href": "https://www.postgresql.org/"
     },
     {
       "name": "Bash",
@@ -65,14 +65,14 @@
       "href": "https://nestjs.com/"
     },
     {
-      "name": "SQL",
+      "name": "PostgreSQL",
       "logo": "/assets/tech/sql.svg",
-      "href": "https://en.wikipedia.org/wiki/SQL"
+      "href": "https://www.postgresql.org/"
     },
     {
-      "name": "NoSQL",
+      "name": "MongoDB",
       "logo": "/assets/tech/nosql.svg",
-      "href": "https://en.wikipedia.org/wiki/NoSQL"
+      "href": "https://www.mongodb.com/"
     },
     {
       "name": "GraphQL",
@@ -135,6 +135,33 @@
       "name": "Vite",
       "logo": "/assets/tech/vite.svg",
       "href": "https://vitejs.dev/"
+    }
+  ],
+  "collaboration": [
+    {
+      "name": "Git",
+      "logo": "/assets/tech/git.svg",
+      "href": "https://git-scm.com/"
+    },
+    {
+      "name": "GitHub",
+      "logo": "/assets/tech/github.svg",
+      "href": "https://github.com/"
+    },
+    {
+      "name": "Bitbucket",
+      "logo": "/assets/tech/bitbucket.svg",
+      "href": "https://bitbucket.org/"
+    },
+    {
+      "name": "JIRA",
+      "logo": "/assets/tech/jira.svg",
+      "href": "https://www.atlassian.com/software/jira"
+    },
+    {
+      "name": "Figma",
+      "logo": "/assets/tech/figma.svg",
+      "href": "https://www.figma.com/"
     }
   ],
   "quality": [

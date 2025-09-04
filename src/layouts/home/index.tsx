@@ -9,7 +9,9 @@ export function HomeLayout({ children }: PropsWithChildren) {
       <HomeInset side="top" />
       <HomeInset side="bottom" />
       <HomeNavigation />
-      <main className="px-6 pt-6 md:pt-0 pb-20 md:pb-6">{children}</main>
+      <main className="px-2 md:px-6 pt-2 md:pt-0 pb-16 md:pb-6">
+        {children}
+      </main>
     </div>
   );
 }

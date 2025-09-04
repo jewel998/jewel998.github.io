@@ -2,6 +2,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
 :root {
   --background: #fff;
   --foreground: #000;
@@ -12,13 +21,19 @@
   @supports (color: color-mix(in lab, red, red)) {
     --pattern-fg: color-mix(in oklab, #000 10%, transparent);
   }
+
+  --isat: env(safe-area-inset-top);
+  --isal: env(safe-area-inset-left);
+  --isar: env(safe-area-inset-right);
+  --isab: env(safe-area-inset-bottom);
+  --shine: shine 5s linear infinite;
 }
 
 .dark {
   --background: var(--color-slate-950);
   --foreground: #f1f5f9;
   --border: #334155;
-  --primary: #30af5b;
+  --primary: #b5ff6d;
   --primary-foreground: #fff;
   --secondary: var(--color-slate-900);
   @supports (color: color-mix(in lab, red, red)) {
@@ -36,6 +51,53 @@
   --font-sign: "Caveat", cursive;
   --font-clash: "ClashDisplay", sans-serif;
   --font-sans: "Satoshi", sans-serif;
+  --animate-shine: var(--shine);
+
+  --animate-accordion-up: accordion-up
+    var(--tw-animation-duration, var(--tw-duration, 0.2s))
+    var(--tw-ease, ease-out) var(--tw-animation-delay, 0s)
+    var(--tw-animation-iteration-count, 1) var(--tw-animation-direction, normal)
+    var(--tw-animation-fill-mode, none);
+  --animate-accordion-down: accordion-down
+    var(--tw-animation-duration, var(--tw-duration, 0.2s))
+    var(--tw-ease, ease-out) var(--tw-animation-delay, 0s)
+    var(--tw-animation-iteration-count, 1) var(--tw-animation-direction, normal)
+    var(--tw-animation-fill-mode, none);
+
+  @keyframes accordion-down {
+    0% {
+      height: 0;
+    }
+    to {
+      height: var(
+        --radix-accordion-content-height,
+        var(
+          --bits-accordion-content-height,
+          var(
+            --reka-accordion-content-height,
+            var(--kb-accordion-content-height, auto)
+          )
+        )
+      );
+    }
+  }
+  @keyframes accordion-up {
+    0% {
+      height: var(
+        --radix-accordion-content-height,
+        var(
+          --bits-accordion-content-height,
+          var(
+            --reka-accordion-content-height,
+            var(--kb-accordion-content-height, auto)
+          )
+        )
+      );
+    }
+    to {
+      height: 0;
+    }
+  }
 }
 
 @layer base {

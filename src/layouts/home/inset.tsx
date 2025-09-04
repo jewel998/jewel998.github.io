@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { useScroll, useTransform, motion } from "motion/react";
 
 const variants = cva(
-  "fixed pointer-events-none from from-background to-transparent z-1",
+  "home-inset fixed pointer-events-none from from-background to-transparent z-51",
   {
     variants: {
       side: {

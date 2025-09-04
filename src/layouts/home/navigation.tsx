@@ -70,7 +70,12 @@ export function HomeNavigation() {
           borderBottomWidth,
         }}
       >
-        <div className="w-full flex items-center justify-between relative">
+        <div
+          className={cn(
+            "w-full flex items-center justify-between relative",
+            isMobile ? "pb-[--isab]" : ""
+          )}
+        >
           <NavigationButton
             path="/"
             label="JB"
