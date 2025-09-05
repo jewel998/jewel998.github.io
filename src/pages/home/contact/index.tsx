@@ -3,13 +3,23 @@ import { HomeSection } from "@/layouts/home/section";
 import { Plus } from "@/components/ui/plus";
 import { Dot } from "@/components/ui/dot";
 import { Link } from "@tanstack/react-router";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { Trans } from "@lingui/react";
+import { useI18n } from "@/components/providers/i18n";
+import { useEffect } from "react";
 
 export function HomeContact() {
+  const { locale, loadMessages } = useI18n();
+
+  useEffect(() => {
+    loadMessages(locale, import(`@/pages/home/contact/i18n/${locale}.json`));
+  }, [loadMessages, locale]);
+
   return (
     <HomeSection>
       <div className="max-w-4xl mx-auto">
         <div className="text-center space-y-8">
-          <div className="space-y-6">
+          <BlurFade inView className="space-y-6">
             <div className="flex items-center justify-center gap-3">
               <Chip
                 variant="dashed"
@@ -20,7 +30,12 @@ export function HomeContact() {
                   ping
                   pingColor="bg-emerald-400 dark:bg-emerald-500"
                 />
-                <span className="font-medium text-xs">Available for work</span>
+                <span className="font-medium text-xs">
+                  <Trans
+                    id="home.contact.available"
+                    message="Available for work"
+                  />
+                </span>
                 <Plus position="top-left" />
                 <Plus position="top-right" />
                 <Plus position="bottom-left" />
@@ -29,17 +44,19 @@ export function HomeContact() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold">
-              Let's Work Together
+              <Trans id="home.contact.title" message="Let's Work Together" />
             </h2>
-          </div>
+          </BlurFade>
 
-          <div className="flex justify-center pt-8">
+          <BlurFade delay={0.3} inView className="flex justify-center pt-8">
             <div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 font-medium transition-all duration-200">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">
+                  <Trans id="home.contact.cta" message="Get In Touch" />
+                </Link>
               </button>
             </div>
-          </div>
+          </BlurFade>
         </div>
       </div>
     </HomeSection>

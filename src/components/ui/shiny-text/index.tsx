@@ -1,7 +1,8 @@
 import { cn } from "@/lib";
+import { type ReactNode } from "react";
 
 interface ShinyTextProps {
-  children: string;
+  children: ReactNode;
   disabled?: boolean;
   speed?: number;
   className?: string;

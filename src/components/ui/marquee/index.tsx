@@ -204,7 +204,7 @@ export function Marquee({
 }
 
 const variants = cva(
-  "absolute top-0 w-[35%] h-full to-transparent pointer-events-none",
+  "absolute top-0 w-[25%] md:w-[35%] h-full to-transparent pointer-events-none",
   {
     variants: {
       side: {

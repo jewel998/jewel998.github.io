@@ -1,3 +1,4 @@
+import { BlurFade } from "@/components/ui/blur-fade";
 import personal from "@/data/personal.json";
 import { cn } from "@/lib";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -6,9 +7,15 @@ import type { ComponentProps, ExoticComponent } from "react";
 export function Socials({ className }: ComponentProps<"div">) {
   return (
     <div className={cn("flex items-center gap-8", className)}>
-      <Social href={"mailto:" + personal.email} icon={Mail} />
-      <Social href={personal.linkedin} icon={Linkedin} />
-      <Social href={personal.github} icon={Github} />
+      <BlurFade delay={0.3} inView className="w-fit">
+        <Social href={"mailto:" + personal.email} icon={Mail} />
+      </BlurFade>
+      <BlurFade delay={0.6} inView className="w-fit">
+        <Social href={personal.linkedin} icon={Linkedin} />
+      </BlurFade>
+      <BlurFade delay={0.9} inView className="w-fit">
+        <Social href={personal.github} icon={Github} />
+      </BlurFade>
     </div>
   );
 }
@@ -28,7 +35,7 @@ function Social({ href, icon: Icon, className }: SocialProps) {
       className={cn("hover:text-primary", className)}
       aria-label="social"
     >
-      {Icon && <Icon className="size-5" />}
+      {Icon && <Icon className="size-4.5" />}
     </a>
   );
 }

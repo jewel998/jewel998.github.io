@@ -7,13 +7,18 @@ import { Dot } from "@/components/ui/dot";
 import { motion, useScroll, useTransform } from "motion/react";
 import {
   useCallback,
+  useEffect,
   useMemo,
   type ComponentProps,
   type ExoticComponent,
+  type ReactNode,
 } from "react";
 import { useMobile } from "@/hooks/useMobile";
+import { Trans } from "@lingui/react";
+import { useI18n } from "@/components/providers/i18n";
 
 export function HomeNavigation() {
+  const { locale, loadMessages } = useI18n();
   const isMobile = useMobile();
   const { scrollY } = useScroll();
   const threshold = useMemo(() => 200, []);
@@ -51,6 +56,13 @@ export function HomeNavigation() {
       else return [borderWidth, borderWidth, borderWidth, "1px"];
     }, [isMobile, borderWidth]);
 
+  useEffect(() => {
+    loadMessages(
+      locale,
+      import(`@/layouts/home/navigation/i18n/${locale}.json`)
+    );
+  }, [loadMessages, locale]);
+
   return (
     <Header
       variant={isMobile ? "fixed" : "sticky"}
@@ -78,14 +90,20 @@ export function HomeNavigation() {
         >
           <NavigationButton
             path="/"
-            label="JB"
+            children="JB"
             className="hidden md:block text-2xl font-sign font-bold text-primary"
             isActiveable={false}
           />
           <div className="flex flex-auto md:flex-none items-center justify-evenly space-x-8 text-sm">
-            <NavigationButton path="/" icon={Home} label="Home" />
-            <NavigationButton path="/about" icon={User} label="About" />
-            <NavigationButton path="/contact" icon={Mail} label="Contact" />
+            <NavigationButton path="/" icon={Home}>
+              <Trans id="home" message="Home" />
+            </NavigationButton>
+            <NavigationButton path="/about" icon={User}>
+              <Trans id="about" message="About" />
+            </NavigationButton>
+            <NavigationButton path="/contact" icon={Mail}>
+              <Trans id="contact" message="Contact" />
+            </NavigationButton>
           </div>
           <div className="flex items-center space-x-4">
             <HeaderTheme />
@@ -99,7 +117,7 @@ export function HomeNavigation() {
 interface NavigationButtonProps {
   path: string;
   icon?: ExoticComponent<ComponentProps<"svg">>;
-  label: string;
+  children: ReactNode;
   className?: string;
   isActiveable?: boolean;
 }
@@ -107,7 +125,7 @@ interface NavigationButtonProps {
 function NavigationButton({
   path,
   icon: Icon,
-  label,
+  children,
   className,
   isActiveable = true,
 }: NavigationButtonProps) {
@@ -131,8 +149,8 @@ function NavigationButton({
       {isActiveable && isActive(path) && (
         <Dot color="bg-primary" className="hidden md:block" />
       )}
-      {Icon && <Icon className="size-6 md:size-4" />}
-      <p>{label}</p>
+      {Icon && <Icon className="size-5 md:size-4" />}
+      <p>{children}</p>
     </Link>
   );
 }
