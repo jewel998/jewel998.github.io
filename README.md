@@ -1,69 +1,54 @@
-# React + TypeScript + Vite
+# 💼 Personal Portfolio – `jewel998.github.io`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Repo Views](https://komarev.com/ghpvc/?username=jewel998&label=Repo%20Views&style=flat-square)](https://github.com/jewel998/jewel998.github.io)
+[![Last Commit](https://img.shields.io/github/last-commit/jewel998/jewel998.github.io?style=flat-square)](https://github.com/jewel998/jewel998.github.io/commits)
+[![License: Private](https://img.shields.io/badge/license-private-red.svg?style=flat-square)](https://github.com/jewel998/jewel998.github.io)
 
-Currently, two official plugins are available:
+This repository contains the full **source code** for my personal portfolio website, hosted at **[jewel998.github.io](https://jewel998.github.io)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The codebase is organized by year, with the current active development branch named:  
+**`2025-source-code`** (or `<year>-source-code` for future versions).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ⚡️ Lightning-fast development with **Vite**
+- 💅 Modern styling using **Tailwind CSS 4**
+- 🧭 Type-safe routing via **@tanstack/react-router**
+- 🌐 Full internationalization support with **LinguiJS**
+- 🧩 Composable UI with **Radix UI** primitives
+- ✅ Fully typed with **TypeScript**
+- 🧪 Unit tested with **Vitest** and **Testing Library**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack Overview
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Category             | Technology                                                                     |
+| -------------------- | ------------------------------------------------------------------------------ |
+| Framework            | [React 19](https://react.dev/)                                                 |
+| Build Tool           | [Vite](https://vitejs.dev/)                                                    |
+| Styling              | [Tailwind CSS 4](https://tailwindcss.com/), `clsx`, `tailwind-merge`           |
+| Routing              | [@tanstack/react-router](https://tanstack.com/router)                          |
+| UI Components        | [Radix UI](https://www.radix-ui.com/), [Lucide Icons](https://lucide.dev/)     |
+| Internationalization | [LinguiJS](https://lingui.dev/)                                                |
+| Type Checking        | [TypeScript](https://www.typescriptlang.org/)                                  |
+| Testing              | [Vitest](https://vitest.dev/), [Testing Library](https://testing-library.com/) |
+| Linting              | [ESLint](https://eslint.org/), `typescript-eslint`                             |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/jewel998/jewel998.github.io.git
+cd jewel998.github.io
+
+# Checkout the active source code branch
+git checkout 2025-source-code
+
+# Install dependencies
+pnpm install
 ```

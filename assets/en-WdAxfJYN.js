@@ -1,0 +1,1 @@
+const e={"home.about.title":"About Me","home.about.description":"I'm {name}, a full-stack developer and entrepreneur with {years}+ years of experience building products that merge technology with creativity. From startups to established companies, I’ve helped craft digital solutions that scale, inspire, and leave an impact."};export{e as default};

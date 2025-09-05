@@ -1,0 +1,1 @@
+const e={"about.experience.title":"Berufserfahrung","about.experience.sub-title":"Erfahrung","about.experience.description":"Ich habe mit einigen der innovativsten Branchenführer zusammengearbeitet, um erstklassige Produkte zu entwickeln."};export{e as default};
