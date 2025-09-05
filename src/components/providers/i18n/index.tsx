@@ -10,6 +10,7 @@ import {
 } from "react";
 import { i18n, type Messages } from "@lingui/core";
 import { useDebounce } from "@/lib/debounce";
+import { compileMessage } from "@lingui/message-utils/compileMessage";
 
 interface I18nContext {
   locale: string;
@@ -85,6 +86,7 @@ export function I18n({ children }: PropsWithChildren) {
   useEffect(() => {
     i18n.load(locale, {});
     i18n.activate(locale);
+    i18n.setMessagesCompiler(compileMessage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
