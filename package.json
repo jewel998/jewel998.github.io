@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "extract": "lingui extract"
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@lingui/core": "^5.4.1",
