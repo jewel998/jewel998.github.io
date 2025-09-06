@@ -1,0 +1,6 @@
+# Allow all bots to crawl everything
+User-agent: *
+Disallow:
+
+# GitHub Pages typically serves the site at this domain
+Sitemap: https://jewel998.github.io/sitemap.xml

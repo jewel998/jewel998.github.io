@@ -1,4 +1,5 @@
 import { cn } from "@/lib";
+import { Slot } from "@radix-ui/react-slot";
 import { type ReactNode } from "react";
 
 interface ShinyTextProps {
@@ -17,7 +18,7 @@ export function ShinyText({
   const animationDuration = `${speed}s`;
 
   return (
-    <p
+    <Slot
       className={cn(
         "bg-clip-text inline-block",
         "bg-linear-120 from-40% via-50% to-60%",
@@ -34,6 +35,6 @@ export function ShinyText({
       }}
     >
       {children}
-    </p>
+    </Slot>
   );
 }

@@ -7,6 +7,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { Trans } from "@lingui/react";
 import { useI18n } from "@/components/providers/i18n";
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 export function HomeContact() {
   const { locale, loadMessages } = useI18n();
@@ -48,14 +49,16 @@ export function HomeContact() {
             </h2>
           </BlurFade>
 
-          <BlurFade delay={0.3} inView className="flex justify-center pt-8">
-            <div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 font-medium transition-all duration-200">
-                <Link to="/contact">
-                  <Trans id="home.contact.cta" message="Get In Touch" />
-                </Link>
-              </button>
-            </div>
+          <BlurFade delay={0.3} inView className="flex justify-center pt-4">
+            <Link to="/contact">
+              <Button
+                variant="outline"
+                className="px-8 py-3 font-medium"
+                aria-label="Contact"
+              >
+                <Trans id="home.contact.cta" message="Get In Touch" />
+              </Button>
+            </Link>
           </BlurFade>
         </div>
       </div>

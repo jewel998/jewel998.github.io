@@ -16,7 +16,7 @@
   --foreground: #000;
   --border: #e5e7eb;
   --primary: #30af5b;
-  --primary-foreground: #fff;
+  --primary-foreground: #000;
   --secondary: #f7f8fa;
   @supports (color: color-mix(in lab, red, red)) {
     --pattern-fg: color-mix(in oklab, #000 10%, transparent);
@@ -34,7 +34,7 @@
   --foreground: #f1f5f9;
   --border: #334155;
   --primary: #b5ff6d;
-  --primary-foreground: #fff;
+  --primary-foreground: #000;
   --secondary: var(--color-slate-900);
   @supports (color: color-mix(in lab, red, red)) {
     --pattern-fg: color-mix(in oklab, #fff 15%, transparent);
@@ -112,6 +112,16 @@ body {
   color: var(--foreground);
 }
 
+::-moz-selection {
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+::selection {
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
 @font-face {
   font-family: "Satoshi";
   src: local("Satoshi"),
@@ -122,4 +132,10 @@ body {
   font-family: "ClashDisplay";
   src: local("ClashDisplay"),
     url("@/assets/fonts/ClashDisplay.ttf") format("truetype");
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

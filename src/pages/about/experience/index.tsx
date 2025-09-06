@@ -9,7 +9,11 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { HomeSection } from "@/layouts/home/section";
-import { HomeHeading } from "@/layouts/home/heading";
+import {
+  HomeDescription,
+  HomeHeading,
+  HomeSubHeading,
+} from "@/layouts/home/heading";
 import { Trans } from "@lingui/react";
 import { useI18n } from "@/components/providers/i18n";
 import { useEffect } from "react";
@@ -25,27 +29,23 @@ export function AboutExperience() {
   }, [loadMessages, locale]);
 
   return (
-    <HomeSection className="px-0 md:px-0 m-auto max-w-5xl flex flex-col md:flex-row justify-between items-start gap-8">
+    <HomeSection className="px-6 md:px-12 m-auto max-w-6xl flex flex-col md:flex-row justify-between items-start gap-8">
       <BlurFade delay={0.3} inView className="md:max-w-sm">
         <HomeHeading>
           <Trans id="about.experience.title" message="Work History" />
         </HomeHeading>
-        <div className="text-3xl md:text-4xl font-clash font-medium mt-2">
-          <p>
-            <Trans id="about.experience.sub-title" message="Experience" />
-          </p>
-        </div>
-        <div className="mt-4 space-y-4 text-sm md:text-base">
-          <p>
-            <Trans
-              id="about.experience.description"
-              message="I have worked with some of the most innovative industry leaders to help build their top-notch products."
-            />
-          </p>
-        </div>
+        <HomeSubHeading>
+          <Trans id="about.experience.sub-title" message="Experience" />
+        </HomeSubHeading>
+        <HomeDescription className="mt-4">
+          <Trans
+            id="about.experience.description"
+            message="I have worked with some of the most innovative industry leaders to help build their top-notch products."
+          />
+        </HomeDescription>
       </BlurFade>
       <Accordion type="single" collapsible asChild>
-        <Timeline className="flex-auto w-full md:max-w-lg">
+        <Timeline className="flex-auto w-full md:max-w-2xl">
           {Experience.map((e, idx) => (
             <BlurFade key={idx} delay={0.6 + idx * 0.2} inView>
               <TimelineItem
@@ -68,11 +68,13 @@ export function AboutExperience() {
                       </div>
                       <div className="flex-auto">
                         <div className="flex gap-4 justify-between items-center">
-                          <h3 className="font-medium">{e.title}</h3>
+                          <h3 className="text-sm md:text-base font-medium">
+                            {e.title}
+                          </h3>
                         </div>
-                        <div className="flex justify-between items-start gap-2 text-xs md:text-sm">
+                        <div className="flex justify-between items-start gap-2 text-xs md:text-sm opacity-60">
                           <a
-                            className="font-medium hover:underline"
+                            className="font-medium hover:underline "
                             href={e.website}
                             rel="noopener noreferrer"
                             target="_blank"
@@ -82,9 +84,7 @@ export function AboutExperience() {
                           >
                             @{e.company}
                           </a>
-                          <p className="text-xs md:text-sm opacity-60">
-                            {e.period}
-                          </p>
+                          <p>{e.period}</p>
                         </div>
                       </div>
                     </AccordionTrigger>

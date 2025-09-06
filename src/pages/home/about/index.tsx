@@ -36,13 +36,13 @@ export function HomeAbout() {
   }, [loadMessages, locale]);
 
   return (
-    <HomeSection className="py-0 px-6 md:px-12 max-w-7xl mx-auto">
+    <HomeSection className="py-0 px-0 md:px-12 max-w-7xl mx-auto">
       <div className="flex justify-center items-center">
         <HomeHeading>
           <Trans id="home.about.title" message="About Me" />
         </HomeHeading>
       </div>
-      <TextReveal className="justify-center text-center font-medium text-xl/8 md:text-2xl/10 lg:text-3xl/12 xl:text-4xl/14">
+      <TextReveal className="px-8 pt-8 justify-center text-center font-medium text-xl/8 md:text-2xl/10 lg:text-3xl/12 xl:text-4xl/14">
         {description}
       </TextReveal>
     </HomeSection>

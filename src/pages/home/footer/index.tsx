@@ -39,6 +39,7 @@ export function LocaleButton({ locale, label }: LocaleButtonProps) {
       variant="link"
       size="none"
       onClick={() => setLocale(locale)}
+      aria-label={"Switch to " + label}
     >
       {label}
     </Button>

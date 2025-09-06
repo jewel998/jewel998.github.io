@@ -6,7 +6,7 @@ import {
 import { routeTree } from "../routeTree.gen";
 
 const history = createHashHistory();
-const router = createRouter({ routeTree, history });
+const router = createRouter({ routeTree, history, scrollRestoration: true });
 
 export function Router() {
   return <RouterProvider router={router} />;

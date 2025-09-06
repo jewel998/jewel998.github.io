@@ -37,7 +37,7 @@ export const TextReveal: FC<TextRevealProps> = ({
     <span
       ref={targetRef}
       className={cn(
-        "flex flex-wrap p-5 lg:p-10 font-bold text-black/20 dark:text-white/20 md:p-8",
+        "flex flex-wrap font-bold text-black/20 dark:text-white/20",
         "text-2xl md:text-3xl lg:text-4xl xl:text-5xl",
         className
       )}

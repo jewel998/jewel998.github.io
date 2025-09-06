@@ -18,7 +18,7 @@ export function HomeHero() {
   }, [loadMessages, locale]);
 
   return (
-    <HomeSection className="relative min-h-dvh flex flex-col justify-center py-8 px-0!">
+    <HomeSection className="relative min-h-dvh flex flex-col justify-center py-20 md:py-12 px-0!">
       <div className="px-6 md:px-12 max-w-7xl mx-auto w-full">
         <BlurFade inView className="hero-subtitle flex items-center gap-2 mb-6">
           <span className="text-2xl">👋</span>
@@ -103,7 +103,11 @@ export function HomeHero() {
           {/* CTA Button */}
           <BlurFade delay={0.6} inView>
             <Link to="/about">
-              <Button variant="outline" className="px-8 py-3 font-medium">
+              <Button
+                variant="outline"
+                className="px-8 py-3 font-medium"
+                aria-label="About Me"
+              >
                 <Trans id="home.hero.cta" message="Know me better" />
               </Button>
             </Link>
@@ -111,7 +115,7 @@ export function HomeHero() {
         </div>
       </div>
       <section className="relative mt-16">
-        <div className="border-y py-3 md:pb-4">
+        <div className="border-y border-border/40 py-3 md:pb-4">
           <Marquee
             scrollerClassName="items-center opacity-15 font-clash font-medium md:text-[4.4rem] md:leading-[5.2rem]"
             texts={[

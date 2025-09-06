@@ -18,7 +18,7 @@ export function HomeExpertise() {
   );
   return (
     <HomeSection>
-      <section className="relative mt-16">
+      <section className="relative">
         <div className="py-3">
           <Marquee
             scrollerClassName="items-center font-normal text-xs md:text-sm md:leading-sm drop-shadow-none"
