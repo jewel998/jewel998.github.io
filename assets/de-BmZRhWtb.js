@@ -1,0 +1,1 @@
+const e={"about.hero.title":"Fullstack-Entwickler","about.hero.description":"Ich verwandle komplexe Herausforderungen in elegante, skalierbare Softwarelösungen, die messbare Ergebnisse liefern und nachhaltiges Wachstum sowie Innovation fördern."};export{e as default};
