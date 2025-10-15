@@ -1,11 +1,24 @@
 [
   {
     "title": "Senior Software Engineer",
+    "logo": "/assets/brands/highlevel.png",
+    "company": "HighLevel",
+    "website": "https://gohighlevel.com",
+    "location": "Remote",
+    "period": "Oct 2025 – Present",
+    "description": "Engineered and optimized contact management systems using Vue3, NestJs, and distributed architectures, enabling agencies to efficiently organize, segment, and engage with millions of contacts through advanced filtering, tagging, and automated communication workflows.",
+    "achievements": [
+      "Built scalable contact database infrastructure handling 50M+ contact records with sub-second query performance, improving contact search and segmentation speed by 70%",
+      "Developed advanced contact deduplication and data enrichment pipelines, reducing duplicate contacts by 85% and enhancing data quality across the platform"
+    ]
+  },
+  {
+    "title": "Senior Software Engineer",
     "logo": "/assets/brands/pocketpills.png",
     "company": "Pocketpills",
     "website": "https://pocketpills.com",
     "location": "Gurugram, IN",
-    "period": "Feb 2025 – Present",
+    "period": "Feb 2025 – Sep 2025",
     "description": "Led the architecture and development of a multi-tenant EMR platform using NestJS, React.js, RabbitMQ, and TanStack, enabling doctors to generate AI-assisted prescriptions with role-based access control and real-time monitoring via SessionStack, Mixpanel and Sentry.",
     "achievements": [
       "Delivered a scalable, production-ready system from scratch in under 4 months, reducing prescription and note-writing time by 40–50%",
