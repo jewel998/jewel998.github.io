@@ -1,11 +1,21 @@
 [
   {
     "title": "Senior Software Engineer",
+    "logo": "/assets/brands/armorcode.png",
+    "company": "ArmorCode",
+    "website": "https://armorcodde.com",
+    "location": "Hybrid",
+    "period": "May 2026 – Present",
+    "description": "",
+    "achievements": []
+  },
+  {
+    "title": "Senior Software Engineer",
     "logo": "/assets/brands/highlevel.png",
     "company": "HighLevel",
     "website": "https://gohighlevel.com",
     "location": "Remote",
-    "period": "Oct 2025 – Present",
+    "period": "Oct 2025 – May 2026",
     "description": "Engineered and optimized contact management systems using Vue3, NestJs, and distributed architectures, enabling agencies to efficiently organize, segment, and engage with millions of contacts through advanced filtering, tagging, and automated communication workflows.",
     "achievements": [
       "Built scalable contact database infrastructure handling 50M+ contact records with sub-second query performance, improving contact search and segmentation speed by 70%",
