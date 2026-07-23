@@ -1,5 +1,12 @@
 {
   "name": "Jyotirmoy Barman",
+  "short_name": "Jyotirmoy",
+  "description": "Portfolio and contact website for Jyotirmoy Barman, a senior software developer specializing in full-stack engineering, architecture, and product delivery.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "en",
   "icons": [
     {
       "src": "/assets/icons/android-icon-36x36.png",

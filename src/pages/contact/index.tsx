@@ -12,6 +12,7 @@ import { Trans } from "@lingui/react";
 import { useI18n } from "@/components/providers/i18n";
 import { useEffect } from "react";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { StructuredData } from "@/components/seo/structured-data";
 
 export function Contact() {
   const { locale, loadMessages } = useI18n();
@@ -22,6 +23,7 @@ export function Contact() {
 
   return (
     <HomeLayoutPage>
+      <StructuredData />
       <HomeSection className="m-auto max-w-2xl">
         <BlurFade inView className="relative size-48 p-4 rounded-full m-auto">
           <img src="/assets/icons/apple-icon.png" alt="profile-picture" />

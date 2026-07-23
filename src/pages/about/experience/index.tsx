@@ -59,7 +59,7 @@ export function AboutExperience() {
                       down={false}
                       hover={false}
                     >
-                      <div className="size-8 border rounded-full overflow-hidden bg-white">
+                      <div className="size-8 border rounded-full overflow-hidden">
                         <img
                           className="h-full w-full object-contain"
                           src={e.logo}
