@@ -136,6 +136,15 @@ body {
     url("@/assets/fonts/ClashDisplay.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Caveat"),
+    url("@/assets/fonts/Caveat-400-latin.woff2") format("woff2");
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
