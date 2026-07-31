@@ -4,6 +4,3 @@ Allow: /
 
 # GitHub Pages typically serves the site at this domain
 Sitemap: https://jewel998.github.io/sitemap.xml
-
-# LLMs
-LLMs: https://jewel998.github.io/llms.txt
