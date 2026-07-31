@@ -95,7 +95,8 @@ export function ProjectsGrid() {
       {/* Full-page blur overlay — only visible when a card is hovered */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-background/70 transition-opacity duration-300 pointer-events-none",
+          "fixed inset-0 z-40 bg-background/70 backdrop-blur-sm pointer-events-none",
+          "transition-[opacity] duration-300",
           hoveredIdx !== null ? "opacity-100" : "opacity-0"
         )}
         aria-hidden
