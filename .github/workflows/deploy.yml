@@ -1,0 +1,53 @@
+name: Build & Deploy to Master
+
+on:
+  push:
+    branches:
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source (develop)
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Preserve files from master
+        run: |
+          git fetch origin master
+          # Extract Google verification files and README from master into dist/
+          git checkout origin/master -- 'google*.html' 2>/dev/null || true
+          git checkout origin/master -- 'README.md' 2>/dev/null || true
+          cp google*.html dist/ 2>/dev/null || true
+          cp README.md dist/ 2>/dev/null || true
+          rm -f google*.html README.md
+
+      - name: Deploy to master
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: master
+          force_orphan: false
+          keep_files: false
+          commit_message: "deploy: ${{ github.sha }}"

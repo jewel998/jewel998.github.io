@@ -12,6 +12,11 @@ const pageMetadata = {
     description:
       "Learn about Jyotirmoy Barman's experience, skills, and engineering background across full-stack delivery and software architecture.",
   },
+  "/projects": {
+    title: "Projects | Jyotirmoy Barman",
+    description:
+      "Explore projects built by Jyotirmoy Barman spanning full-stack development, AI/ML, and modern web applications.",
+  },
   "/contact": {
     title: "Contact | Jyotirmoy Barman",
     description:

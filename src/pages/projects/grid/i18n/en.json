@@ -1,0 +1,9 @@
+{
+  "projects.filter.all": "All",
+  "projects.filter.frontend": "Frontend",
+  "projects.filter.backend": "Backend",
+  "projects.empty": "No projects found in this category.",
+  "projects.link.source": "Source",
+  "projects.link.npm": "npm",
+  "projects.link.view": "View"
+}

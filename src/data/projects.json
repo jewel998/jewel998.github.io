@@ -1,18 +1,63 @@
 [
   {
-    "title": "Comparison of Time-Series Forecasting Models",
-    "description": "Compared time-series forecasting models including AR, ARMA, ARIMA, ARMAX, SVR, KRR, and SMOReg, evaluating performance on real datasets using RMSE and MAE as key metrics.",
-    "tools": ["Python", "AI/ML"]
+    "title": "Config Platform",
+    "description": "A lightweight, standards-first configuration platform supporting multi-tenant and multi-project configuration with offline-first and remote-first patterns. Published as @jewel998/config on npm.",
+    "tools": ["TypeScript", "Firebase", "VitePress", "pnpm"],
+    "categories": ["Frontend", "Backend"],
+    "year": 2026,
+    "image": "/assets/projects/config.png",
+    "github": "https://github.com/jewel998/config",
+    "live": "https://jewel998.github.io/config"
   },
   {
-    "title": "Textbook Lending Bank",
-    "description": "Developed and managed a textbook lending system for college students, streamlining inventory tracking, lending, and returns to promote resource sharing and reduce academic costs. Implemented role-based access for admins and borrowers with automated lending limits, reminders, and database-backed book availability.",
-    "tools": ["HTML", "CSS", "PHP"]
+    "title": "State Machine",
+    "description": "A lightweight, type-safe stateless state machine library for JavaScript/TypeScript. Zero per-object overhead, async transactions with database rollbacks, middleware pipeline system, and scales to millions of objects efficiently.",
+    "tools": ["TypeScript", "Node.js", "npm"],
+    "categories": ["Backend"],
+    "year": 2025,
+    "image": "/assets/projects/state-machine.png",
+    "github": "https://github.com/jewel998/state-machine",
+    "npmjs": "https://npmjs.org/package/@jewel998/state-machine",
+    "live": "https://jewel998.github.io/state-machine"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "Personal portfolio website built with React, TanStack Router, Tailwind CSS v4, i18n support via Lingui, and Motion animations. Features theme transitions via View Transitions API.",
+    "tools": ["React", "TypeScript", "Tailwind CSS", "TanStack Router", "Motion"],
+    "categories": ["Frontend"],
+    "year": 2025,
+    "image": "/assets/projects/portfolio.png",
+    "github": "https://github.com/jewel998/jewel998.github.io",
+    "live": "https://jewel998.github.io"
   },
   {
     "title": "Lyrics Synchronized Music Player",
-    "description": "Built a web-based music playlist application with real-time lyrics synchronization, enabling a seamless audio experience. Designed an intuitive interface with support for timestamped lyrics parsing, playback control, and dynamic highlighting.",
-    "tools": ["HTML", "CSS", "React.js"],
-    "github": "github"
+    "description": "A web-based music playlist application with real-time lyrics synchronization, timestamped lyrics parsing, playback control, and dynamic highlighting.",
+    "tools": ["React", "Redux", "CSS", "HTML"],
+    "categories": ["Frontend"],
+    "year": 2023,
+    "image": "/assets/projects/playlist.png",
+    "github": "https://github.com/jewel998/playlist",
+    "live": "https://jewel998.github.io/playlist"
+  },
+  {
+    "title": "Comparison of Time-Series Forecasting Models",
+    "description": "Compared time-series forecasting models including AR, ARMA, ARIMA, ARMAX, SVR, KRR, and SMOReg, evaluating performance on real datasets using RMSE and MAE as key metrics.",
+    "tools": ["Python", "AI/ML", "Scikit-learn"],
+    "categories": ["Backend"],
+    "year": 2023,
+    "image": null,
+    "github": null,
+    "live": null
+  },
+  {
+    "title": "HACK36 2020 Website",
+    "description": "Official website for HACK36 2020, a national-level hackathon by MNNIT Allahabad. Responsive design with modern UI patterns and animations.",
+    "tools": ["HTML", "CSS", "JavaScript"],
+    "categories": ["Frontend"],
+    "year": 2020,
+    "image": "/assets/projects/hack36-2020.png",
+    "github": "https://github.com/jewel998/hack36-2020",
+    "live": "https://jewel998.github.io/hack36-2020"
   }
 ]

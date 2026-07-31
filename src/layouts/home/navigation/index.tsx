@@ -1,10 +1,16 @@
 import { Header } from "@/components/ui/header";
 import { Link, useLocation } from "@tanstack/react-router";
 import { HeaderTheme } from "@/components/ui/header/theme";
-import { Home, Mail, User } from "lucide-react";
+import { Home, Mail, User, FolderKanban } from "lucide-react";
 import { cn } from "@/lib";
 import { Dot } from "@/components/ui/dot";
-import { motion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValue,
+  useMotionValueEvent,
+} from "motion/react";
 import {
   useCallback,
   useEffect,
@@ -14,6 +20,7 @@ import {
   type ReactNode,
 } from "react";
 import { useMobile } from "@/hooks/useMobile";
+import { useCssVar } from "@/hooks/useCssVar";
 import { Trans } from "@lingui/react";
 import { useI18n } from "@/components/providers/i18n";
 
@@ -49,6 +56,42 @@ export function HomeNavigation() {
     [isMobile]
   );
   const borderRadius = useTransform(scrollY, [0, threshold], roundedValues);
+  const bgColor = useCssVar("--background");
+  const scrollProgress = useTransform(scrollY, [0, threshold], [1, 0]);
+  const backgroundColor = useMotionValue(bgColor);
+
+  const applyBgColor = useCallback(
+    (alpha: number) => {
+      if (bgColor.startsWith("#")) {
+        const hex =
+          bgColor.length === 4
+            ? `#${bgColor[1]}${bgColor[1]}${bgColor[2]}${bgColor[2]}${bgColor[3]}${bgColor[3]}`
+            : bgColor;
+        const alphaHex = Math.round(alpha * 255)
+          .toString(16)
+          .padStart(2, "0");
+        backgroundColor.set(`${hex}${alphaHex}`);
+      } else if (bgColor.startsWith("oklch")) {
+        const inner = bgColor.replace(/oklch\(|\)/g, "").trim();
+        backgroundColor.set(`oklch(${inner} / ${alpha})`);
+      } else {
+        const match = bgColor.match(/[\d.]+/g);
+        if (match && match.length >= 3) {
+          backgroundColor.set(
+            `rgba(${match[0]}, ${match[1]}, ${match[2]}, ${alpha})`
+          );
+        }
+      }
+    },
+    [bgColor, backgroundColor]
+  );
+
+  useMotionValueEvent(scrollProgress, "change", applyBgColor);
+
+  useEffect(() => {
+    applyBgColor(scrollProgress.get());
+  }, [applyBgColor, scrollProgress]);
+
   const borderWidth = useTransform(scrollY, [0, threshold], ["0px", "1px"]);
   const [borderTopWidth, borderLeftWidth, borderRightWidth, borderBottomWidth] =
     useMemo(() => {
@@ -76,6 +119,7 @@ export function HomeNavigation() {
           bottom,
           width,
           borderRadius,
+          backgroundColor,
           borderTopWidth,
           borderLeftWidth,
           borderRightWidth,
@@ -100,6 +144,9 @@ export function HomeNavigation() {
             </NavigationButton>
             <NavigationButton path="/about" icon={User}>
               <Trans id="about" message="About" />
+            </NavigationButton>
+            <NavigationButton path="/projects" icon={FolderKanban}>
+              <Trans id="projects" message="Projects" />
             </NavigationButton>
             <NavigationButton path="/contact" icon={Mail}>
               <Trans id="contact" message="Contact" />
@@ -150,7 +197,7 @@ function NavigationButton({
         <Dot color="bg-primary" className="hidden md:block" />
       )}
       {Icon && <Icon className="size-5 md:size-4" />}
-      <p>{children}</p>
+      <p className="hidden md:block">{children}</p>
     </Link>
   );
 }

@@ -44,7 +44,7 @@ export function HomeContact() {
               </Chip>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-wider font-clash">
               <Trans id="home.contact.title" message="Let's Work Together" />
             </h2>
           </BlurFade>

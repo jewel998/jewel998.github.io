@@ -1,0 +1,15 @@
+import { HomeLayout } from "@/layouts/home";
+import { Projects } from "@/pages/projects";
+import { createFileRoute } from "@tanstack/react-router";
+
+export const Route = createFileRoute("/projects")({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
+  return (
+    <HomeLayout>
+      <Projects />
+    </HomeLayout>
+  );
+}

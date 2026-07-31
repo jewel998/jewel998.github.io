@@ -139,3 +139,9 @@ body {
   animation: none;
   mix-blend-mode: normal;
 }
+
+/* Magic UI theme toggler: pin collapsed clip-path so the new snapshot isn't
+   visible before the JS animation starts (prevents flash on Firefox). */
+[data-magicui-theme-vt="active"]::view-transition-new(root) {
+  clip-path: var(--magicui-theme-vt-clip-from);
+}
