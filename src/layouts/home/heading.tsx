@@ -27,7 +27,7 @@ export function HomeHeading({
     >
       <Icon className="size-4 md:size-4.5" />
       <ShinyText>
-        <h3>{children}</h3>
+        <h2>{children}</h2>
       </ShinyText>
     </div>
   );

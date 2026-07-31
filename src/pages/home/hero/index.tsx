@@ -37,11 +37,13 @@ export function HomeHero() {
           inView
           className="hero-title font-clash font-medium text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight"
         >
-          <Trans
-            id="home.hero.sub-title"
-            message="Building <0>systems </0><1></1>that <0>scale & perform</0>."
-            components={[<span className="text-primary" />, <br />]}
-          />
+          <h1>
+            <Trans
+              id="home.hero.sub-title"
+              message="Building <0>systems </0><1></1>that <0>scale & perform</0>."
+              components={[<span className="text-primary" />, <br />]}
+            />
+          </h1>
         </BlurFade>
 
         {/* Description */}

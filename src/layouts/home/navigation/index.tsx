@@ -119,6 +119,7 @@ export function HomeNavigation() {
           "m-auto px-6 lg:px-8 xl:px-12 w-full",
           isMobile && "bg-transparent shadow-lg"
         )}
+        aria-label="Main navigation"
         style={{
           top,
           bottom,
