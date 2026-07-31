@@ -1,0 +1,31 @@
+# Jyotirmoy Barman — Senior Software Developer
+
+> Personal portfolio and engineering showcase
+
+## About
+
+Jyotirmoy Barman is a senior software developer focused on full-stack engineering, scalable architecture, and product delivery across modern web and cloud platforms.
+
+## Pages
+
+- [Home](https://jewel998.github.io/): Portfolio landing page with hero, expertise, and contact sections
+- [About](https://jewel998.github.io/about/): Experience, skills, and engineering background
+- [Projects](https://jewel998.github.io/projects/): Showcase of open-source and production projects
+- [Contact](https://jewel998.github.io/contact/): Get in touch for collaborations and opportunities
+
+## Projects
+
+- [Config Platform](https://github.com/jewel998/config): Multi-tenant configuration platform with Firebase and VitePress docs
+- [State Machine](https://github.com/jewel998/state-machine): Type-safe stateless state machine library for JS/TS, published on npm
+- [SKU Label Maker](https://github.com/jewel998/sku): PWA React label maker with PDF generation
+- [Portfolio Website](https://github.com/jewel998/jewel998.github.io): React + TanStack Router + Tailwind CSS v4 + i18n
+- [Lyrics Music Player](https://github.com/jewel998/playlist): Web-based music player with real-time lyrics sync
+
+## Tech Stack
+
+React, TypeScript, Node.js, NestJS, Tailwind CSS, TanStack Router, Motion, Firebase, AWS, GCP, Prisma, Fastify
+
+## Links
+
+- GitHub: https://github.com/jewel998
+- Website: https://jewel998.github.io

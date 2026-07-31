@@ -124,12 +124,14 @@ body {
 
 @font-face {
   font-family: "Satoshi";
+  font-display: swap;
   src: local("Satoshi"),
     url("@/assets/fonts/SatoshiVariable.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ClashDisplay";
+  font-display: swap;
   src: local("ClashDisplay"),
     url("@/assets/fonts/ClashDisplay.ttf") format("truetype");
 }
