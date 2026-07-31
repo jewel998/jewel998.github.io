@@ -33,7 +33,7 @@ export function HomeHero() {
 
         {/* Main Heading */}
         <BlurFade
-          delay={0.3}
+          delay={0.15}
           inView
           className="hero-title font-clash font-medium text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight"
         >
@@ -45,7 +45,7 @@ export function HomeHero() {
         </BlurFade>
 
         {/* Description */}
-        <BlurFade delay={0.6} inView className="hero-description mb-8">
+        <BlurFade delay={0.3} inView className="hero-description mb-8">
           <div className="flex flex-col md:flex-row items-center gap-4 w-full">
             <Separator className="flex-auto" />
             <p className="w-full md:max-w-lg text-sm text-muted-foreground leading-relaxed">
@@ -61,7 +61,7 @@ export function HomeHero() {
         <div className="hero-buttons flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           {/* Social Links */}
           <div className="flex flex-wrap gap-6">
-            <BlurFade delay={0.6} inView>
+            <BlurFade delay={0.35} inView>
               <Link
                 to={personal.linkedin}
                 target="_blank"
@@ -74,7 +74,7 @@ export function HomeHero() {
                 <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>
             </BlurFade>
-            <BlurFade delay={0.9} inView>
+            <BlurFade delay={0.45} inView>
               <Link
                 to={personal.github}
                 target="_blank"
@@ -87,7 +87,7 @@ export function HomeHero() {
                 <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>
             </BlurFade>
-            <BlurFade delay={1.2} inView>
+            <BlurFade delay={0.55} inView>
               <Link
                 to={`mailto:${personal.email}`}
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
@@ -101,7 +101,7 @@ export function HomeHero() {
           </div>
 
           {/* CTA Button */}
-          <BlurFade delay={0.6} inView>
+          <BlurFade delay={0.35} inView>
             <Link to="/about">
               <Button
                 variant="outline"

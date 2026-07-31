@@ -148,6 +148,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      href="/assets/fonts/SatoshiVariable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap"
       rel="stylesheet"
       media="print"
@@ -174,7 +181,14 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="root"></div>
+    <div id="root">
+      <!-- Initial skeleton to reduce Speed Index — replaced once React mounts -->
+      <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--background,#fff)">
+        <div style="width:40px;height:40px;border:3px solid var(--border,#e5e7eb);border-top-color:var(--primary,#30af5b);border-radius:50%;animation:spin .6s linear infinite"></div>
+      </div>
+      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
+    <link rel="modulepreload" href="/src/main.tsx" />
   </body>
 </html>
