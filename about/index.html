@@ -148,12 +148,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      href="/assets/fonts/SatoshiVariable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
-    <script type="module" crossorigin src="/assets/index-DYFKZEB-.js"></script>
+    <script type="module" crossorigin src="/assets/index-Bkuh4rK6.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CvDWx4CY.css">
   </head>
   <body>
@@ -176,6 +183,13 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="root"></div>
+    <div id="root">
+      <!-- Initial skeleton to reduce Speed Index — replaced once React mounts -->
+      <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--background,#fff)">
+        <div style="width:40px;height:40px;border:3px solid var(--border,#e5e7eb);border-top-color:var(--primary,#30af5b);border-radius:50%;animation:spin .6s linear infinite"></div>
+      </div>
+      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+    </div>
+    <link rel="modulepreload" href="data:application/octet-stream;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgY3JlYXRlUm9vdCB9IGZyb20gInJlYWN0LWRvbS9jbGllbnQiOwppbXBvcnQgeyBSb3V0ZXIgfSBmcm9tICJAL3JvdXRlciI7CmltcG9ydCAiQC9pbmRleC5jc3MiOwppbXBvcnQgeyBUaGVtZVByb3ZpZGVyIH0gZnJvbSAiQC9jb21wb25lbnRzL3Byb3ZpZGVycy90aGVtZSI7CmltcG9ydCB7IEkxOG4gfSBmcm9tICJAL2NvbXBvbmVudHMvcHJvdmlkZXJzL2kxOG4iOwoKY3JlYXRlUm9vdChkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicm9vdCIpISkucmVuZGVyKAogIDxTdHJpY3RNb2RlPgogICAgPEkxOG4+CiAgICAgIDxUaGVtZVByb3ZpZGVyPgogICAgICAgIDxSb3V0ZXIgLz4KICAgICAgPC9UaGVtZVByb3ZpZGVyPgogICAgPC9JMThuPgogIDwvU3RyaWN0TW9kZT4KKTsK" />
   </body>
 </html>
