@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - 2025-source-code
 
 permissions:
   contents: write
