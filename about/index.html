@@ -57,11 +57,11 @@
       http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
-        script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+        script-src 'self' 'sha256-CPHFmqeVEklox4Fxf7xyHkLKfc/Ot3cwnMViIYjN3xs=' 'sha256-VD2YqwzJxOvDYmFwFLG3c0wzHMchowiKUkIjlrToGqo=' https://www.googletagmanager.com https://www.google-analytics.com;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
         font-src 'self' https://fonts.gstatic.com;
         img-src 'self' https://www.googletagmanager.com data:;
-        connect-src 'self' https://www.google-analytics.com;
+        connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
         frame-src https://www.googletagmanager.com;
         object-src 'none';
         base-uri 'self';
@@ -144,16 +144,17 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <script type="module" crossorigin src="/assets/index-qWyePscj.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-RyrbuzVN.css">
+    <script type="module" crossorigin src="/assets/index-DYFKZEB-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CvDWx4CY.css">
   </head>
   <body>
     <noscript>
