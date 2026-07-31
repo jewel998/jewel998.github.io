@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-TQ9VSDG8");
-    </script>
-    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0f172a" />
@@ -52,14 +38,13 @@
       content="https://jewel998.github.io/assets/icons/android-icon-192x192.png"
     />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
     <meta
       http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
-        script-src 'self' 'sha256-CPHFmqeVEklox4Fxf7xyHkLKfc/Ot3cwnMViIYjN3xs=' 'sha256-VD2YqwzJxOvDYmFwFLG3c0wzHMchowiKUkIjlrToGqo=' https://www.googletagmanager.com https://www.google-analytics.com;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+        style-src 'self' 'unsafe-inline';
+        font-src 'self';
         img-src 'self' https://www.googletagmanager.com data:;
         connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
         frame-src https://www.googletagmanager.com;
@@ -69,7 +54,7 @@
       "
     />
     <title>Jyotirmoy Barman | Senior Software Developer</title>
-    <!-- GitHub Pages SPA redirect handler -->
+    <!-- SPA redirect handler (GitHub Pages) -->
     <script>
       (function (l) {
         if (l.search[1] === "/") {
@@ -89,64 +74,7 @@
       })(window.location);
     </script>
     <link rel="canonical" href="https://jewel998.github.io/" />
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/assets/icons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/assets/icons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/assets/icons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/assets/icons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/assets/icons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/assets/icons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/assets/icons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/assets/icons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/icons/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/assets/icons/android-icon-192x192.png"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload critical fonts -->
     <link
       rel="preload"
       href="/assets/fonts/SatoshiVariable.ttf"
@@ -155,13 +83,24 @@
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
+      rel="preload"
+      href="/assets/fonts/Caveat-400-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <script type="module" crossorigin src="/assets/index-Bkuh4rK6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CvDWx4CY.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-icon-180x180.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <script type="module" crossorigin src="/assets/index-CnhgrKRd.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DpNPloHH.css">
   </head>
   <body>
     <noscript>
@@ -184,12 +123,26 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="root">
-      <!-- Initial skeleton to reduce Speed Index — replaced once React mounts -->
-      <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--background,#fff)">
-        <div style="width:40px;height:40px;border:3px solid var(--border,#e5e7eb);border-top-color:var(--primary,#30af5b);border-radius:50%;animation:spin .6s linear infinite"></div>
+      <!-- Static shell for FCP/LCP — visible until React hydrates -->
+      <div style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:5rem 1.5rem;font-family:system-ui,sans-serif">
+        <p style="font-size:1.125rem;color:#6b7280;margin-bottom:1.5rem">👋 Hey! It's me Jyotirmoy</p>
+        <h1 style="font-size:clamp(2rem,5vw,3.75rem);font-weight:500;line-height:1.15;margin:0">
+          Building <span style="color:#30af5b">systems</span><br/>that <span style="color:#30af5b">scale & perform</span>.
+        </h1>
       </div>
-      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
     </div>
-    <link rel="modulepreload" href="data:application/octet-stream;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgY3JlYXRlUm9vdCB9IGZyb20gInJlYWN0LWRvbS9jbGllbnQiOwppbXBvcnQgeyBSb3V0ZXIgfSBmcm9tICJAL3JvdXRlciI7CmltcG9ydCAiQC9pbmRleC5jc3MiOwppbXBvcnQgeyBUaGVtZVByb3ZpZGVyIH0gZnJvbSAiQC9jb21wb25lbnRzL3Byb3ZpZGVycy90aGVtZSI7CmltcG9ydCB7IEkxOG4gfSBmcm9tICJAL2NvbXBvbmVudHMvcHJvdmlkZXJzL2kxOG4iOwoKY3JlYXRlUm9vdChkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicm9vdCIpISkucmVuZGVyKAogIDxTdHJpY3RNb2RlPgogICAgPEkxOG4+CiAgICAgIDxUaGVtZVByb3ZpZGVyPgogICAgICAgIDxSb3V0ZXIgLz4KICAgICAgPC9UaGVtZVByb3ZpZGVyPgogICAgPC9JMThuPgogIDwvU3RyaWN0TW9kZT4KKTsK" />
+    <!-- GTM deferred — doesn't block FCP -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TQ9VSDG8");
+    </script>
   </body>
 </html>
