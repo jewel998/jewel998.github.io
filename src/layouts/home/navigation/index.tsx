@@ -31,7 +31,7 @@ export function HomeNavigation() {
   const threshold = useMemo(() => 200, []);
 
   const widthValues = useMemo(
-    () => (isMobile ? ["100%", "100%", "100%"] : ["100%", "95%", "60%"]),
+    () => (isMobile ? ["92%", "92%", "92%"] : ["100%", "95%", "60%"]),
     [isMobile]
   );
   const width = useTransform(
@@ -48,11 +48,11 @@ export function HomeNavigation() {
   const bottom = useTransform(
     scrollY,
     [0, threshold],
-    isMobile ? ["0px", "0px"] : ["unset", "unset"]
+    isMobile ? ["12px", "12px"] : ["unset", "unset"]
   );
 
   const roundedValues = useMemo(
-    () => (isMobile ? ["0px", "0px"] : ["0px", "36px"]),
+    () => (isMobile ? ["24px", "24px"] : ["0px", "36px"]),
     [isMobile]
   );
   const borderRadius = useTransform(scrollY, [0, threshold], roundedValues);
@@ -62,28 +62,30 @@ export function HomeNavigation() {
 
   const applyBgColor = useCallback(
     (alpha: number) => {
+      // On mobile, use reduced opacity for glass effect
+      const effectiveAlpha = isMobile ? Math.min(alpha, 0.65) : alpha;
       if (bgColor.startsWith("#")) {
         const hex =
           bgColor.length === 4
             ? `#${bgColor[1]}${bgColor[1]}${bgColor[2]}${bgColor[2]}${bgColor[3]}${bgColor[3]}`
             : bgColor;
-        const alphaHex = Math.round(alpha * 255)
+        const alphaHex = Math.round(effectiveAlpha * 255)
           .toString(16)
           .padStart(2, "0");
         backgroundColor.set(`${hex}${alphaHex}`);
       } else if (bgColor.startsWith("oklch")) {
         const inner = bgColor.replace(/oklch\(|\)/g, "").trim();
-        backgroundColor.set(`oklch(${inner} / ${alpha})`);
+        backgroundColor.set(`oklch(${inner} / ${effectiveAlpha})`);
       } else {
         const match = bgColor.match(/[\d.]+/g);
         if (match && match.length >= 3) {
           backgroundColor.set(
-            `rgba(${match[0]}, ${match[1]}, ${match[2]}, ${alpha})`
+            `rgba(${match[0]}, ${match[1]}, ${match[2]}, ${effectiveAlpha})`
           );
         }
       }
     },
-    [bgColor, backgroundColor]
+    [bgColor, backgroundColor, isMobile]
   );
 
   useMotionValueEvent(scrollProgress, "change", applyBgColor);
@@ -95,7 +97,7 @@ export function HomeNavigation() {
   const borderWidth = useTransform(scrollY, [0, threshold], ["0px", "1px"]);
   const [borderTopWidth, borderLeftWidth, borderRightWidth, borderBottomWidth] =
     useMemo(() => {
-      if (isMobile) return ["1px", "0px", "0px", "0px"];
+      if (isMobile) return ["1px", "1px", "1px", "1px"];
       else return [borderWidth, borderWidth, borderWidth, "1px"];
     }, [isMobile, borderWidth]);
 
@@ -113,7 +115,10 @@ export function HomeNavigation() {
       asChild
     >
       <motion.nav
-        className="m-auto px-6 lg:px-8 xl:px-12 w-full"
+        className={cn(
+          "m-auto px-6 lg:px-8 xl:px-12 w-full",
+          isMobile && "bg-transparent shadow-lg"
+        )}
         style={{
           top,
           bottom,
