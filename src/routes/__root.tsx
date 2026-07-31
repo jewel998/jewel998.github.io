@@ -52,7 +52,8 @@ function RootComponent() {
 
     const canonicalTag = document.querySelector('link[rel="canonical"]');
     const baseUrl = "https://jewel998.github.io";
-    const canonicalPath = location.pathname === "/" ? baseUrl + "/" : baseUrl + location.pathname;
+    const path = location.pathname.endsWith("/") ? location.pathname : location.pathname + "/";
+    const canonicalPath = baseUrl + path;
 
     if (canonicalTag) {
       canonicalTag.setAttribute("href", canonicalPath);

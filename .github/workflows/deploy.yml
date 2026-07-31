@@ -3,7 +3,6 @@ name: Build & Deploy to Master
 on:
   push:
     branches:
-      - develop
       - 2025-source-code
 
 permissions:
