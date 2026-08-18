@@ -1,0 +1,1 @@
+const t={"home.contact.title":"お気軽にご相談ください","home.contact.cta":"お問い合わせ","home.contact.available":"新規案件受付中"};export{t as default};

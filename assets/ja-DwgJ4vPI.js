@@ -1,0 +1,1 @@
+const e={"about.hero.title":"フルスタックエンジニア","about.hero.description":"設計から実装・運用まで一貫して対応できるエンジニアとして、堅牢で拡張性の高いシステムを構築し、プロダクトの成長と技術的な挑戦の両立を追求しています。","about.hero.resume":"職務経歴書"};export{e as default};

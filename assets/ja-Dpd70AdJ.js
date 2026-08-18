@@ -1,1 +1,0 @@
-const e={"projects.filter.all":"すべて","projects.filter.frontend":"フロントエンド","projects.filter.backend":"バックエンド","projects.empty":"このカテゴリにプロジェクトはありません。","projects.link.source":"ソース","projects.link.npm":"npm","projects.link.view":"表示"};export{e as default};
