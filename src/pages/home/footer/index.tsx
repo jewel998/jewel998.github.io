@@ -17,6 +17,12 @@ export function HomeFooter() {
           <BlurFade delay={0.3} inView className="w-fit">
             <LocaleButton locale="de" label="Deutsch" />
           </BlurFade>
+          <BlurFade delay={0.45} inView>
+            <span className="opacity-40">&middot;</span>
+          </BlurFade>
+          <BlurFade delay={0.6} inView className="w-fit">
+            <LocaleButton locale="ja" label="日本語" />
+          </BlurFade>
         </div>
         <div>
           <Socials />
