@@ -33,12 +33,15 @@ export function useI18n() {
   return context;
 }
 
+const SUPPORTED_LOCALES = ["en", "de", "ja"];
+
 export function I18n({ children }: PropsWithChildren) {
-  const [locale, setLocale] = useState(
-    (navigator.languages?.[0] || navigator.language || "en")
+  const [locale, setLocale] = useState(() => {
+    const detected = (navigator.languages?.[0] || navigator.language || "en")
       .slice(0, 2)
-      .toLowerCase()
-  );
+      .toLowerCase();
+    return SUPPORTED_LOCALES.includes(detected) ? detected : "en";
+  });
   const [_messages, _setMessages] = useState<Promise<{ default: Messages }>[]>(
     []
   );
