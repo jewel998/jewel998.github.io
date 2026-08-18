@@ -1,14 +1,14 @@
 {
-  "home.hero.title": "こんにちは！{firstName}です",
-  "home.hero.sub-title": "<0>スケール</0>し、<1></1><0>高性能</0>なシステムを構築。",
-  "home.hero.description": "複雑な課題をエレガントでスケーラブルなソフトウェアソリューションに変え、測定可能な成果をもたらし、長期的な成長とイノベーションを推進します。",
+  "home.hero.title": "はじめまして、{firstName}と申します",
+  "home.hero.sub-title": "<0>堅牢</0>で<1></1><0>拡張性の高い</0>システムを設計・構築。",
+  "home.hero.description": "複雑なビジネス課題を、保守性が高くスケーラブルなソフトウェアへ。確かな技術力で、プロダクトの成長を加速させます。",
   "home.socials.linkedin": "LinkedIn",
   "home.socials.github": "GitHub",
   "home.socials.email": "メール",
-  "home.hero.cta": "もっと知る",
-  "home.expertise.architecture": "アーキテクチャ",
+  "home.hero.cta": "詳しく見る",
+  "home.expertise.architecture": "設計",
   "home.expertise.ux": "UX",
-  "home.expertise.engineering": "エンジニアリング",
-  "home.expertise.leadership": "リーダーシップ",
-  "home.expertise.innovation": "イノベーション"
+  "home.expertise.engineering": "開発",
+  "home.expertise.leadership": "チーム推進",
+  "home.expertise.innovation": "技術革新"
 }
