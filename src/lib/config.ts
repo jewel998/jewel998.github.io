@@ -46,7 +46,7 @@ export const PROJECTS_DEFAULT = ProjectsDefaults as Project[];
  * remote values from the API in the background and emits "updated".
  */
 export const config = initConfig({
-  clientId: "cid_MvhpWr0ReuilKSOD61hY",
+  clientId: import.meta.env.VITE_CONFIG_CLIENT_ID,
   defaults: {
     [JOBS_KEY]: JOBS_DEFAULT,
     [PROJECTS_KEY]: PROJECTS_DEFAULT,
