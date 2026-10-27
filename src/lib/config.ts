@@ -42,11 +42,16 @@ export const PROJECTS_DEFAULT = ProjectsDefaults as Project[];
 /**
  * Shared feature-flag / remote-config client.
  *
- * Serves the bundled defaults immediately (optimistic), then resolves the
- * remote values from the API in the background and emits "updated".
+ * Serves the bundled defaults immediately (reads with a matching default
+ * resolve synchronously from memory), then fetches the remote values from the
+ * API in the background and emits "updated" once they arrive.
  */
 export const config = initConfig({
   clientId: import.meta.env.VITE_CONFIG_CLIENT_ID,
+  // Tier 1 keys — fetched immediately on init so the remote values arrive
+  // without waiting for a lazy read, and "updated" fires when they land.
+  prefetch: [JOBS_KEY, PROJECTS_KEY],
+  // Instant fallbacks returned before the remote fetch resolves.
   defaults: {
     [JOBS_KEY]: JOBS_DEFAULT,
     [PROJECTS_KEY]: PROJECTS_DEFAULT,
