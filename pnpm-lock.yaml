@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@jewel998/config':
+        specifier: ^0.2.2
+        version: 0.2.2
       '@lingui/core':
         specifier: ^5.4.1
         version: 5.4.1(@lingui/babel-plugin-lingui-macro@5.4.1(typescript@5.8.3))
@@ -537,6 +540,10 @@ packages:
   '@jest/types@29.6.3':
     resolution: {integrity: sha512-u3UPsIilWKOM3F9CXtrG8LEJmNxwoCQC/XVj4IKYXvvpx7QIi/Kg1LI5uDmDpKlac62NUtX7eLjRh+jVZcLOzw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
+  '@jewel998/config@0.2.2':
+    resolution: {integrity: sha512-O1N4w9WnqgFxUCFeqB3e5orkl4V8Cw5kBUj58zeXQg2By3UwpPjTYtGYC9e1mJEONALiZGtRGOOYEkmymX/6Ag==}
+    engines: {node: '>=22.0.0'}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -3309,6 +3316,8 @@ snapshots:
       '@types/node': 24.3.0
       '@types/yargs': 17.0.33
       chalk: 4.1.2
+
+  '@jewel998/config@0.2.2': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:

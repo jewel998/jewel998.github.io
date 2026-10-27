@@ -1,5 +1,5 @@
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
-import Experience from "@/data/experience.json";
+import { useJobs } from "@/hooks/useJobs";
 import {
   Accordion,
   AccordionContent,
@@ -20,6 +20,7 @@ import { useEffect } from "react";
 
 export function AboutExperience() {
   const { locale, loadMessages } = useI18n();
+  const experience = useJobs();
 
   useEffect(() => {
     loadMessages(
@@ -46,11 +47,11 @@ export function AboutExperience() {
       </BlurFade>
       <Accordion type="single" collapsible asChild>
         <Timeline className="flex-auto w-full md:max-w-2xl">
-          {Experience.map((e, idx) => (
+          {experience.map((e, idx) => (
             <BlurFade key={idx} delay={0.6 + idx * 0.2} inView>
               <TimelineItem
                 className="py-2"
-                next={idx + 1 !== Experience.length}
+                next={idx + 1 !== experience.length}
               >
                 <AccordionItem value={idx.toString()}>
                   <div className="flex flex-col">
@@ -93,7 +94,7 @@ export function AboutExperience() {
                         {e.description}
                       </p>
                     </AccordionContent>
-                    {idx + 1 !== Experience.length && (
+                    {idx + 1 !== experience.length && (
                       <Separator className="mt-4 opacity-60" />
                     )}
                   </div>

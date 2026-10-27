@@ -2,7 +2,8 @@ import { HomeSection } from "@/layouts/home/section";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Chip } from "@/components/ui/chip";
 import { cn } from "@/lib";
-import projects from "@/data/projects.json";
+import { useProjects } from "@/hooks/useProjects";
+import type { Project } from "@/lib/config";
 import { useEffect, useMemo, useState } from "react";
 import { ExternalLink, Github, FolderOpen, Package } from "lucide-react";
 import { Trans } from "@lingui/react";
@@ -19,6 +20,7 @@ const categoryTranslationIds: Record<Category, string> = {
 
 export function ProjectsGrid() {
   const { locale, loadMessages } = useI18n();
+  const projects = useProjects();
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
@@ -31,7 +33,7 @@ export function ProjectsGrid() {
       activeCategory === "All"
         ? projects
         : projects.filter((p) => p.categories.includes(activeCategory)),
-    [activeCategory]
+    [activeCategory, projects]
   );
 
   return (
@@ -103,18 +105,6 @@ export function ProjectsGrid() {
       />
     </HomeSection>
   );
-}
-
-interface Project {
-  title: string;
-  description: string;
-  tools: string[];
-  categories: string[];
-  year: number;
-  image: string | null;
-  github: string | null;
-  npmjs?: string | null;
-  live: string | null;
 }
 
 function ProjectCard({
