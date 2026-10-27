@@ -48,10 +48,8 @@ export const PROJECTS_DEFAULT = ProjectsDefaults as Project[];
  */
 export const config = initConfig({
   clientId: import.meta.env.VITE_CONFIG_CLIENT_ID,
-  // Tier 1 keys — fetched immediately on init so the remote values arrive
-  // without waiting for a lazy read, and "updated" fires when they land.
-  prefetch: [JOBS_KEY, PROJECTS_KEY],
-  // Instant fallbacks returned before the remote fetch resolves.
+  // Instant fallbacks returned before the remote fetch resolves. Reading a key
+  // triggers a lazy fetch; "updated" fires once the remote value lands.
   defaults: {
     [JOBS_KEY]: JOBS_DEFAULT,
     [PROJECTS_KEY]: PROJECTS_DEFAULT,

@@ -24,11 +24,9 @@ export function useConfigList<T>(key: string, fallback: T[]): T[] {
       }
     };
 
-    // Re-read once the prefetch resolves and on every background update.
-    void config.ready().then(sync);
+    // Read directly from config: resolves to the default instantly and kicks
+    // off a lazy fetch. "updated" then delivers the remote value when it lands.
     config.on("updated", sync);
-
-    // Pick up a value that may already be resolved (memory/cache or default).
     void sync();
 
     return () => {
