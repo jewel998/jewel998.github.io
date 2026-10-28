@@ -13,7 +13,7 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@jewel998/config": "^0.2.4",
+    "@jewel998/config": "^0.2.6",
     "@lingui/core": "^5.4.1",
     "@lingui/message-utils": "^5.4.1",
     "@lingui/react": "^5.4.1",
