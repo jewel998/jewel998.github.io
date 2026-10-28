@@ -1,4 +1,4 @@
-import{c as a}from"./heading-CpmnsIGx.js";/**
+import{c as a}from"./heading-C8-sdVcf.js";/**
  * @license lucide-react v0.542.0 - ISC
  *
  * This source code is licensed under the ISC license.
